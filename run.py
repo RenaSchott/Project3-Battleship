@@ -20,5 +20,7 @@ def main():
     print(WELCOME/n)
     print(START)
     #print(RULES)
+    print(f"\nYou chose {user_action}, computer chose {computer_action}.\n")
+
 
 main()
