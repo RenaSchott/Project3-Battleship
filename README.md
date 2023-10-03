@@ -51,7 +51,7 @@ View the live project here: <>
 
 ### Site goals
 
-The site wants to challenge the user 
+The site wants to challenge the user to a fun battleship game.
 
 ### User stories
 
