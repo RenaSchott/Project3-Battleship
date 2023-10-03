@@ -6,7 +6,24 @@ import pyfiglet
 WELCOME = pyfiglet.figlet_format("Welcome to Battleship!")
 #RULES = You can find the rules for Battleship 
 
-START = input("Do you want to start the game (y/n)?")
+#START = input("Do you want to start the game (y/n)?")
+ 
+
+def board_creation():
+    """Create a board for the game battleship"""
+    board = [
+        [" ", 1, 2, 3, 4, 5, 6], 
+        ["a", " ", " ", " ", " ", " ", ],
+        ["b", " ", " ", " ", " ", " ", ],
+        ["c", " ", " ", " ", " ", " ", ]
+        ["d", " ", " ", " ", " ", " ", ]
+        ["e", " ", " ", " ", " ", " ", ]
+        ["f", " ", " ", " ", " ", " ", ]
+        ]
+    return board
+
+player1 = board_creation()
+print(player1)
 
 #def start_game():
     #try:
@@ -16,11 +33,11 @@ START = input("Do you want to start the game (y/n)?")
     #except:
         
 
-def main():
-    print(WELCOME/n)
-    print(START)
+#def main():
+    #print(WELCOME/n)
+    #print(START)
     #print(RULES)
-    print(f"\nYou chose {user_action}, computer chose {computer_action}.\n")
+    #print(f"\nYou chose {user_action}, computer chose {computer_action}.\n")
 
 
-main()
+#main()
