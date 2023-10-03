@@ -8,18 +8,16 @@ Tick Tack toe
 
 # Battleship
 
-![Landing page](assets/readme-images/landing.png)
-![Game page](assets/readme-images/game.png)
+![]()
+![]()
 
-Being interested in different memory challenges, this JavaScript game should 
-be a little challenge for the brain. The game should test the visual
-memory of the user, while hopefully having fun.
+Being interested in different games, this Python challenge was an interestint experience. This game should be fun if the user likes those kind of games.
 
 View the live project here: <>
 
 ## Table of content
 
-- [Find the matching pair](#find-the-matching-pair)
+- [Battleship](#battleship)
   - [Table of content](#table-of-content)
   - [UX](#ux)
     - [Site goals](#site-goals)
