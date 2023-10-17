@@ -15,15 +15,18 @@ def board_creation():
         [" ", 1, 2, 3, 4, 5, 6], 
         ["a", " ", " ", " ", " ", " ", ],
         ["b", " ", " ", " ", " ", " ", ],
-        ["c", " ", " ", " ", " ", " ", ]
-        ["d", " ", " ", " ", " ", " ", ]
-        ["e", " ", " ", " ", " ", " ", ]
-        ["f", " ", " ", " ", " ", " ", ]
+        ["c", " ", " ", " ", " ", " ", ],
+        ["d", " ", " ", " ", " ", " ", ],
+        ["e", " ", " ", " ", " ", " ", ],
+        ["f", " ", " ", " ", " ", " ", ],
         ]
     return board
 
-player1 = board_creation()
-print(player1)
+board1 = board_creation()
+
+
+board2 = board_creation()
+
 
 #def start_game():
     #try:
@@ -33,11 +36,13 @@ print(player1)
     #except:
         
 
-#def main():
-    #print(WELCOME/n)
+def main():
+    print(WELCOME)
     #print(START)
     #print(RULES)
+    print(board1)
+    print(board2)
     #print(f"\nYou chose {user_action}, computer chose {computer_action}.\n")
 
 
-#main()
+main()
