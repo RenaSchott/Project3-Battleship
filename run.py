@@ -6,7 +6,9 @@ import pyfiglet
 WELCOME = pyfiglet.figlet_format("Welcome to Battleship!")
 #RULES = You can find the rules for Battleship 
 
-#START = input("Do you want to start the game (y/n)?")
+def starting_question():
+    start = input("Do you want to start the game (y/n)?")
+    return start
  
 
 def board_creation():
@@ -52,7 +54,7 @@ def print_board(board):
 
 def main():
     print(WELCOME)
-    #print(START)
+    starting_question()
     #print(RULES)
     board = board_creation()
     #board2 = board_creation()
