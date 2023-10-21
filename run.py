@@ -6,11 +6,13 @@ import pyfiglet
 WELCOME = pyfiglet.figlet_format("Welcome to Battleship!")
 
 def starting_question():
+    """Starting question asked"""
     start = input("Do you want to start the game (y/n)?")
     return start
 
 
 def username():
+    """Ask for the username"""
     username = input("What is your name?")
     return username
 
