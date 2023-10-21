@@ -61,9 +61,9 @@ def main():
     username()
     board1 = board_creation()
     board2 = board_creation()
-    print(f"{username}'s board")
+    print(f"Your board")
     print_board(board1)
-    print(f"opponent's board")
+    print(f"Opponent's board")
     print_board(board2)
     #print(f"\nYou chose {user_action}, computer chose {computer_action}.\n")
 
