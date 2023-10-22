@@ -137,18 +137,31 @@ def user_guess(board, player):
         print(f"Invalid guess: '{guess}'. Please try again.")
     return guess
 
-def move_validation(guess, board2):
+def move_validation(guess, board):
     moves = []
-    if board2[row][column] == "X":
-        print(f"You hit one battleship and it sunk. Congratulations!")
-        board2[row][column] = "*"
-        moves.append(guess)
-    elif guess not in moves:
-        print(f"There is no battleship!")
-        board2[row][column] = "O"
-        moves.append(guess)
-    else:
-        print(f"You already tried this one. Please try again.")            
+    turns = 15
+    while turns > 0:
+        print(board)
+        row, column = user_guess(board, player)
+        if board[row][column] == "X":
+            print(f"You hit one battleship and it sunk. Congratulations!")
+            board[row][column] = "*"
+            moves.append(guess)
+            turns -= 1
+        elif guess not in moves:
+            print(f"There is no battleship!")
+            board[row][column] = "O"
+            moves.append(guess)
+            turns -= 1
+        else:
+            print(f"You already tried this one. Please try again.")     
+        if ship_sunk_count(board) == 6:
+            print(f"Congratulations! You won.") 
+            break    
+        print("You can try " + str(turns) + " more times.")
+        if turns = 0:
+            print("Sorry! Game over! You lost.")
+            break
     
 
 def ship_sunk_count(board):
@@ -175,6 +188,7 @@ def main():
     style_board(board2)
     guess = user_guess(board2, player)
     move_validation(guess, board2)
+    move_validation(guess, board1)
     style_board(board2)
     #print(f"\nYou chose {user_action}, computer chose {computer_action}.\n")
 
