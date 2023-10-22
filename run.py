@@ -137,9 +137,15 @@ def user_guess(board, player):
         print(f"Invalid guess: '{guess}'. Please try again.")
     return guess
 
-def move_validation(guess):
+def move_validation(guess, board2):
     moves = []
-    if guess not in moves:
+    if board2[row][column] == "X":
+        print(f"You hit one battleship and it sunk. Congratulations!")
+        board2[row][column] = "*"
+        moves.append(guess)
+    elif guess not in moves:
+        print(f"There is no battleship!")
+        board2[row][column] = "O"
         moves.append(guess)
     else:
         print(f"You already tried this one. Please try again.")            
@@ -168,7 +174,7 @@ def main():
     print(f"Opponent's board")
     style_board(board2)
     guess = user_guess(board2, player)
-    move_validation(guess)
+    move_validation(guess, board2)
     style_board(board2)
     #print(f"\nYou chose {user_action}, computer chose {computer_action}.\n")
 
