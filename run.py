@@ -127,6 +127,16 @@ def user_guess(board, player):
         board[6][5] = player
     elif move == "f6":
         board[6][6] = player
+    else:
+        print(f"Invalid move: '{move}'. Please try again.")
+    return move
+
+def move_validation(move):
+    moves = []
+    if move not in moves:
+        moves.append(move)
+    else:
+        print(f"You already tried this one. Please try again.")            
 
 #def start_game():
     #try:
@@ -142,10 +152,13 @@ def main():
     username()
     board1 = board_creation()
     board2 = board_creation()
+    player = "x"
     print(f"Your board")
-    
     style_board(board1)
     print(f"Opponent's board")
+    style_board(board2)
+    user_guess(board2, player)
+    move_validation(move)
     style_board(board2)
     #print(f"\nYou chose {user_action}, computer chose {computer_action}.\n")
 

@@ -4,6 +4,7 @@ for pyfiglet module
 <https://www.geeksforgeeks.org/python-ascii-art-using-pyfiglet-module/>
 Tick Tack toe
 <https://www.youtube.com/watch?v=RqCZBbfd9Fw>
+<https://blog.enterprisedna.co/python-if-not/>
 
 
 # Battleship
