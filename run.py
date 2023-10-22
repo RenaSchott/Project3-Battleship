@@ -157,7 +157,7 @@ def main():
     style_board(board1)
     print(f"Opponent's board")
     style_board(board2)
-    user_guess(board2, player)
+    guess = user_guess(board2, player)
     move_validation(guess)
     style_board(board2)
     #print(f"\nYou chose {user_action}, computer chose {computer_action}.\n")
