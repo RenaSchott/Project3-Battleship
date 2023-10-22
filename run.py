@@ -53,9 +53,9 @@ def ship_generation(board):
     """Create random ships for the game"""
     for ship in range(6):
         ship_row, ship_column = randint(1, 6), randint(1,6)
-        while board[ship_row][ship_column] == "x":
+        while board[ship_row][ship_column] == "X":
             ship_row, ship_column = randint(1, 6), randint(1,6)
-        board[ship_row][ship_column] = "x"
+        board[ship_row][ship_column] = "X"
 
 
 def user_guess(board, player):
@@ -143,14 +143,16 @@ def move_validation(guess):
         moves.append(guess)
     else:
         print(f"You already tried this one. Please try again.")            
+    
 
-#def start_game():
-    #try:
-        #if input == y:
+def ship_sunk_count(board):
+    count = 0
+    for row in board:
+        for column in row: 
+            if column =="X":
+                count += 1
+    return count
 
-       # else:
-    #except:
-        
 
 def main():
     print(WELCOME)
