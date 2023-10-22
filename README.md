@@ -58,7 +58,10 @@ The site wants to challenge the user to a fun battleship game.
 
 #### As a visitor
 
-- I want to 
+- I want to play a game of battleship
+- I want to have fun
+- I want to be entertained
+- I want to be able to have a good overview
 
 #### As the administrator
 

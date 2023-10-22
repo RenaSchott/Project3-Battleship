@@ -57,84 +57,84 @@ def user_guess(board, player):
     guess = input("Make a guess(e.g. a1 or f3): ")
     if guess == "a1":
         board[1][1] = player
-    elif move == "a2":
+    elif guess == "a2":
         board[1][2] = player
-    elif move == "a3":
+    elif guess == "a3":
         board[1][3] = player
-    elif move == "a4":
+    elif guess == "a4":
         board[1][4] = player
-    elif move == "a5":
+    elif guess == "a5":
         board[1][5] = player
-    elif move == "a6":
+    elif guess == "a6":
         board[1][6] = player
-    elif move == "b1":
+    elif guess == "b1":
         board[2][1] = player
-    elif move == "b2":
+    elif guess == "b2":
         board[2][2] = player
-    elif move == "b3":
+    elif guess == "b3":
         board[2][3] = player
-    elif move == "b4":
+    elif guess == "b4":
         board[2][4] = player
-    elif move == "b5":
+    elif guess == "b5":
         board[2][5] = player
-    elif move == "b6":
+    elif guess == "b6":
         board[2][6] = player
-    elif move == "c1":
+    elif guess == "c1":
         board[3][1] = player
-    elif move == "c2":
+    elif guess == "c2":
         board[3][2] = player
-    elif move == "c3":
+    elif guess == "c3":
         board[3][3] = player
-    elif move == "c4":
+    elif guess == "c4":
         board[3][4] = player
-    elif move == "c5":
+    elif guess == "c5":
         board[3][5] = player
-    elif move == "c6":
+    elif guess == "c6":
         board[3][6] = player
-    elif move == "d1":
+    elif guess == "d1":
         board[4][1] = player
-    elif move == "d2":
+    elif guess == "d2":
         board[4][2] = player
-    elif move == "d3":
+    elif guess == "d3":
         board[4][3] = player
-    elif move == "d4":
+    elif guess == "d4":
         board[4][4] = player
-    elif move == "d5":
+    elif guess == "d5":
         board[4][5] = player
-    elif move == "d6":
+    elif guess == "d6":
         board[4][6] = player
-    elif move == "e1":
+    elif guess == "e1":
         board[5][1] = player
-    elif move == "e2":
+    elif guess == "e2":
         board[5][2] = player
-    elif move == "e3":
+    elif guess == "e3":
         board[5][3] = player
-    elif move == "e4":
+    elif guess == "e4":
         board[5][4] = player
-    elif move == "e5":
+    elif guess == "e5":
         board[5][5] = player
-    elif move == "e6":
+    elif guess == "e6":
         board[5][6] = player
-    elif move == "f1":
+    elif guess == "f1":
         board[6][1] = player
-    elif move == "f2":
+    elif guess == "f2":
         board[6][2] = player
-    elif move == "f3":
+    elif guess == "f3":
         board[6][3] = player
-    elif move == "f4":
+    elif guess == "f4":
         board[6][4] = player
-    elif move == "f5":
+    elif guess == "f5":
         board[6][5] = player
-    elif move == "f6":
+    elif guess == "f6":
         board[6][6] = player
     else:
-        print(f"Invalid move: '{move}'. Please try again.")
-    return move
+        print(f"Invalid guess: '{guess}'. Please try again.")
+    return guess
 
-def move_validation(move):
+def move_validation(guess):
     moves = []
-    if move not in moves:
-        moves.append(move)
+    if guess not in moves:
+        moves.append(guess)
     else:
         print(f"You already tried this one. Please try again.")            
 
@@ -158,7 +158,7 @@ def main():
     print(f"Opponent's board")
     style_board(board2)
     user_guess(board2, player)
-    move_validation(move)
+    move_validation(guess)
     style_board(board2)
     #print(f"\nYou chose {user_action}, computer chose {computer_action}.\n")
 
