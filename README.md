@@ -74,8 +74,8 @@ The site wants to challenge the user to a fun battleship game.
 
 Here are the drawings of the wireframes:
 
-![Drawing of landing page on mobile phones](assets/readme-images/wireframe1.png)
-![Drawing of exemplary game set up on mobile phones](assets/readme-images/wireframe3.png)
+![Drawing of welcome page](assets/readmeimages/wireframe1.png)
+![Drawing of exemplary game set up](assets/readmeimages/wireframe2.png)
 
 
 ### Flow Chart
