@@ -2,7 +2,7 @@
 # You can delete these comments, but do not change the name of this file
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
 import pyfiglet
-import random
+from random import randint
 
 WELCOME = pyfiglet.figlet_format("Welcome to Battleship!")
 
@@ -49,8 +49,14 @@ def style_board(board):
     print(f" {board[6][0]} | {board[6][1]} | {board[6][2]} | {board[6][3]} | {board[6][4]} | {board[6][5]} | {board[6][6]} ")
     
 
-#def ship_generation(board):
-    
+def ship_generation(board):
+    """Create random ships for the game"""
+    for ship in range(6):
+        ship_row, ship_column = randint(1, 6), randint(1,6)
+        while board[ship_row][ship_column] == "x":
+            ship_row, ship_column = randint(1, 6), randint(1,6)
+        board[ship_row][ship_column] = "x"
+
 
 def user_guess(board, player):
     """Player guess for their move"""
@@ -152,6 +158,8 @@ def main():
     username()
     board1 = board_creation()
     board2 = board_creation()
+    ship_generation(board1)
+    ship_generation(board2)
     player = "x"
     print(f"Your board")
     style_board(board1)
