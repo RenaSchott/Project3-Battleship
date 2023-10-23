@@ -63,81 +63,81 @@ def ship_generation(board):
 
 
 # Inspired by https://www.youtube.com/watch?v=RqCZBbfd9Fw
-def user_guess(board, player):
+def user_guess(board):
     """Player guess for their move"""
     guess = input("Make a guess(e.g. a1 or f3): ")
     if guess == "a1":
-        board[1][1] = player
+        board[1][1]
     elif guess == "a2":
-        board[1][2] = player
+        board[1][2]
     elif guess == "a3":
-        board[1][3] = player
+        board[1][3]
     elif guess == "a4":
-        board[1][4] = player
+        board[1][4]
     elif guess == "a5":
-        board[1][5] = player
+        board[1][5]
     elif guess == "a6":
-        board[1][6] = player
+        board[1][6]
     elif guess == "b1":
-        board[2][1] = player
+        board[2][1]
     elif guess == "b2":
-        board[2][2] = player
+        board[2][2]
     elif guess == "b3":
-        board[2][3] = player
+        board[2][3]
     elif guess == "b4":
-        board[2][4] = player
+        board[2][4]
     elif guess == "b5":
-        board[2][5] = player
+        board[2][5]
     elif guess == "b6":
-        board[2][6] = player
+        board[2][6]
     elif guess == "c1":
-        board[3][1] = player
+        board[3][1]
     elif guess == "c2":
-        board[3][2] = player
+        board[3][2]
     elif guess == "c3":
-        board[3][3] = player
+        board[3][3]
     elif guess == "c4":
-        board[3][4] = player
+        board[3][4]
     elif guess == "c5":
-        board[3][5] = player
+        board[3][5]
     elif guess == "c6":
-        board[3][6] = player
+        board[3][6]
     elif guess == "d1":
-        board[4][1] = player
+        board[4][1]
     elif guess == "d2":
-        board[4][2] = player
+        board[4][2]
     elif guess == "d3":
-        board[4][3] = player
+        board[4][3]
     elif guess == "d4":
-        board[4][4] = player
+        board[4][4]
     elif guess == "d5":
-        board[4][5] = player
+        board[4][5]
     elif guess == "d6":
-        board[4][6] = player
+        board[4][6]
     elif guess == "e1":
-        board[5][1] = player
+        board[5][1]
     elif guess == "e2":
-        board[5][2] = player
+        board[5][2]
     elif guess == "e3":
-        board[5][3] = player
+        board[5][3]
     elif guess == "e4":
-        board[5][4] = player
+        board[5][4]
     elif guess == "e5":
-        board[5][5] = player
+        board[5][5]
     elif guess == "e6":
-        board[5][6] = player
+        board[5][6]
     elif guess == "f1":
-        board[6][1] = player
+        board[6][1]
     elif guess == "f2":
-        board[6][2] = player
+        board[6][2]
     elif guess == "f3":
-        board[6][3] = player
+        board[6][3]
     elif guess == "f4":
-        board[6][4] = player
+        board[6][4]
     elif guess == "f5":
-        board[6][5] = player
+        board[6][5]
     elif guess == "f6":
-        board[6][6] = player
+        board[6][6]
     else:
         print(f"Invalid guess: '{guess}'. Please try again.")
     return guess
@@ -149,15 +149,15 @@ def move_validation(guess, board):
     turns = 15
     while turns > 0:
         print(board)
-        row, column = user_guess(board, player)
-        if board[row][column] == "X":
+        row, column = user_guess(board)
+        if board2[row][column] == "X":
             print(f"You hit one battleship and it sunk. Congratulations!")
-            board[row][column] = "*"
+            board1[row][column] = "*"
             moves.append(guess)
             turns -= 1
         elif guess not in moves:
             print(f"There is no battleship!")
-            board[row][column] = "O"
+            board1[row][column] = "O"
             moves.append(guess)
             turns -= 1
         else:
@@ -187,18 +187,17 @@ def main():
     user = username()
     board1 = board_creation()
     board2 = board_creation()
-    ship_generation(board1)
+    #ship_generation(board1)
     ship_generation(board2)
     player = "x"
     print(f"{user}'s board")
     style_board(board1)
     print(f"Opponent's board")
     style_board(board2)
-    guess = user_guess(board2, player)
+    guess = user_guess(board2)
     move_validation(guess, board2)
     move_validation(guess, board1)
-    style_board(board2)
-    #print(f"\nYou chose {user_action}, computer chose {computer_action}.\n")
+    #style_board(board2)
 
 
 main()
