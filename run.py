@@ -73,7 +73,7 @@ def user_guess():
     while column not in "123456":
         print("Invalid input. Please redo.")
         column = input("Make a guess for the column (1-6): ")
-    return int(column), convert_guess_to_numbers[row]
+    return convert_guess_to_numbers[row], int(column)
 
 
 convert_guess_to_numbers = {
@@ -90,7 +90,7 @@ def move_validation():
         guess = str(row) + str(column)
         if board1[row][column] == "X":
             print(f"You hit one battleship and it sunk. Congratulations!")
-            board2[row][column] = "*"
+            board2[row][column] = "*"abcdef
             moves.append(guess)
             sunken1 += 1
             turns -= 1
@@ -109,16 +109,6 @@ def move_validation():
             print("Sorry! Game over! You lost.")
             break
     
-
-# Inspired by https://www.youtube.com/watch?v=tF1WRCrd_HQ
-#def ship_sunk_count(board1):
-    #count = 0
-    #for row in board1:
-        #for column in row: 
-          #  if column =="X":
-             #   count += 1
-   # return count
-
 
 def main():
     print(WELCOME)
