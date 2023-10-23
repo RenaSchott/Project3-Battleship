@@ -91,6 +91,7 @@ def move_validation():
             print(f"You hit one battleship and it sunk. Congratulations!")
             board2[row][column] = "*"
             moves.append(guess)
+            sunken1 += 1
             turns -= 1
         elif guess not in moves:
             print(f"There is no battleship!")
@@ -99,7 +100,7 @@ def move_validation():
             turns -= 1
         else:
             print(f"You already tried this one. Please try again.")     
-        if ship_sunk_count(board) == 6:
+        if sunken1 == 6:
             print(f"Congratulations! You won.") 
             break    
         print("You can try " + str(turns) + " more times.")
@@ -109,13 +110,13 @@ def move_validation():
     
 
 # Inspired by https://www.youtube.com/watch?v=tF1WRCrd_HQ
-def ship_sunk_count(board):
-    count = 0
-    for row in board:
-        for column in row: 
-            if column =="X":
-                count += 1
-    return count
+#def ship_sunk_count(board1):
+    #count = 0
+    #for row in board1:
+        f#or column in row: 
+          #  if column =="X":
+             #   count += 1
+   # return count
 
 
 def main():
@@ -126,6 +127,8 @@ def main():
     board1 = board_creation()
     global board2
     board2 = board_creation()
+    global sunken1
+    sunken1 = 0
     ship_generation(board1)
     print(f"{user}'s board")
     style_board(board1)
