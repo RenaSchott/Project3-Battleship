@@ -97,9 +97,9 @@ def move_validation(guess, board):
             board2[row][column] = "O"
             moves.append(guess)
             turns -= 1
-        elif row <=1 and >=6:
+        elif row < 1 or row > 6:
             print(f"Invalid guess. Please try again.")
-        elif column <=1 and >=6:
+        elif column < 1 or column > 6:
             print(f"Invalid guess. Please try again.")
         else:
             print(f"You already tried this one. Please try again.")     
