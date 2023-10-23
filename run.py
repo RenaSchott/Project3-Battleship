@@ -1,26 +1,31 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
 import pyfiglet
 from random import randint
 
 # Inspired by https://www.geeksforgeeks.org/python-ascii-art-using-pyfiglet-module/
 WELCOME = pyfiglet.figlet_format("Welcome to Battleship!")
 
-def starting_question():
+def display_homepage():
     """Starting question asked"""
     start = input("Do you want to start the game (y/n)?")
+    try:
+        if start === y:
+            continue
+        elif start === n:
+            start = input("Do you want to start the game (y/n)?")
+    except:
+        TypeError("Only y or n are allowed.")
+
     return start
 
 
-def username():
+def get_username():
     """Ask for the username"""
     username = input("What is your name?")
     return username
 
 
 # Inspired by https://www.youtube.com/watch?v=RqCZBbfd9Fw
-def board_creation():
+def create_board():
     """Create boards for the game battleship"""
     board = [
         [" ", 1, 2, 3, 4, 5, 6], 
@@ -35,7 +40,7 @@ def board_creation():
 
 
 # Inspired by https://www.youtube.com/watch?v=RqCZBbfd9Fw
-def style_board(board):
+def print_board(board):
     """Give game boards the proper styling"""
     print(f" {board[0][0]} | {board[0][1]} | {board[0][2]} | {board[0][3]} | {board[0][4]} | {board[0][5]} | {board[0][6]} ")
     print(f"---|---|---|---|---|---|---")
@@ -53,17 +58,18 @@ def style_board(board):
     
 
 # Inspired by https://www.youtube.com/watch?v=tF1WRCrd_HQ
-def ship_generation(board):
+def generate_ships(board):
     """Create random ships for the game"""
     for ship in range(6):
         ship_row, ship_column = randint(1, 6), randint(1,6)
         while board[ship_row][ship_column] == "X":
             ship_row, ship_column = randint(1, 6), randint(1,6)
         board[ship_row][ship_column] = "X"
+    # cs: return board
 
 
 # Inspired by https://www.youtube.com/watch?v=tF1WRCrd_HQ
-def user_guess():
+def run_game():
     """Player guess for their move"""
     row = input("Make a guess for the row (a-f): ").lower()
     while row not in "abcdef":
@@ -86,6 +92,7 @@ def move_validation():
     turns = 15
     sunken1 = 0
     while turns > 0:
+        style_board(board1)
         row, column = user_guess()
         guess = str(row) + str(column)
         if board1[row][column] == "X":
@@ -114,11 +121,11 @@ def main():
     print(WELCOME)
     starting_question()
     user = username()
-    global board1
-    board1 = board_creation()
+    #global board1
+    board1 = create_board()
     #global board2
     #board2 = board_creation()
-    ship_generation(board1)
+    board1 = generate_ships(board1)
     print(f"{user}'s board")
     style_board(board1)
     #print(f"Guess board")
