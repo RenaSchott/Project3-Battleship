@@ -140,7 +140,7 @@ def user_guess(board):
         board[6][5]
     elif guess == "f6":
         board[6][6]
-    return guess, row, column
+    return guess, row, column, convert_guess_to_numbers[row]
 
 
 convert_guess_to_numbers = {
