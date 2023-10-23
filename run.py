@@ -81,12 +81,12 @@ convert_guess_to_numbers = {
 
 
 # Inspired by https://www.youtube.com/watch?v=tF1WRCrd_HQ
-def move_validation(guess, board):
+def move_validation():
     moves = []
     turns = 15
     while turns > 0:
         row, column = user_guess()
-        guess = row + column
+        guess = str(row) + str(column)
         if board1[row][column] == "X":
             print(f"You hit one battleship and it sunk. Congratulations!")
             board2[row][column] = "*"
@@ -126,12 +126,11 @@ def main():
     board1 = board_creation()
     global board2
     board2 = board_creation()
-    #ship_generation(board1)
+    ship_generation(board1)
     print(f"{user}'s board")
     style_board(board1)
     print(f"Guess board")
     style_board(board2)
-    guess = user_guess()
-    move_validation(guess, board2)
+    move_validation()
     
 main()
