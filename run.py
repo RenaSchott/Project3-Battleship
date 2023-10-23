@@ -90,7 +90,7 @@ def move_validation():
         guess = str(row) + str(column)
         if board1[row][column] == "X":
             print(f"You hit one battleship and it sunk. Congratulations!")
-            board2[row][column] = "*"abcdef
+            board2[row][column] = "*"
             moves.append(guess)
             sunken1 += 1
             turns -= 1
