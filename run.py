@@ -153,11 +153,11 @@ convert_guess_to_numbers = {
 
 
 # Inspired by https://www.youtube.com/watch?v=tF1WRCrd_HQ
-def move_validation(guess, board):
+def move_validation(guess, board1, board2):
     moves = []
     turns = 15
     while turns > 0:
-        row, column = user_guess(board)
+        row, column = user_guess(board1)
         assumption = convert_guess_to_numbers[guess]
         if board1[row][column] == "X":
             print(f"You hit one battleship and it sunk. Congratulations!")
@@ -202,6 +202,6 @@ def main():
     print(f"Guess board")
     style_board(board2)
     guess = user_guess(board2)
-    move_validation(guess, board2)
+    move_validation(guess, board1, board2)
     
 main()
