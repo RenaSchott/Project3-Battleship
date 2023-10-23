@@ -200,7 +200,7 @@ The content of this project was inspired by the Love Sandwiches project and the 
 Inspirations for specific problems were taken from the following websites:
   - <https://www.geeksforgeeks.org/python-ascii-art-using-pyfiglet-module/>
   - <https://www.freecodecamp.org/news/python-exit-how-to-use-an-exit-function-in-python-to-stop-a-program/>
- 
+  - <https://www.geeksforgeeks.org/python-docstrings/>
 
 ### Media
 
