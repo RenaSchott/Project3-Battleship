@@ -65,7 +65,7 @@ def generate_ships(board):
         while board[ship_row][ship_column] == "X":
             ship_row, ship_column = randint(1, 6), randint(1,6)
         board[ship_row][ship_column] = "X"
-    # cs: return board
+    return board
 
 
 # Inspired by https://www.youtube.com/watch?v=tF1WRCrd_HQ
