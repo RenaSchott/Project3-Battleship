@@ -1,11 +1,3 @@
-Credits 
-for pyfiglet module
-<https://www.geeksforgeeks.org/python-ascii-art-using-pyfiglet-module/>
-Tick Tack toe
-<https://www.youtube.com/watch?v=RqCZBbfd9Fw>
-
-<https://www.youtube.com/watch?v=tF1WRCrd_HQ>
-
 # Battleship
 
 ![]()
@@ -202,8 +194,11 @@ The link to the live page can be found here: [Battleship] (<>)
 
 The content of this project was inspired by the Love Sandwiches project and the content of the course. In general, the following websites were used for inspiration:
   - <https://www.w3schools.com/>
+  - <https://www.youtube.com/watch?v=RqCZBbfd9Fw>
+  - <https://www.youtube.com/watch?v=tF1WRCrd_HQ>
 Inspirations for specific problems were taken from the following websites:
-  - 
+  - <https://www.geeksforgeeks.org/python-ascii-art-using-pyfiglet-module/>
+ 
 
 ### Media
 
