@@ -63,7 +63,7 @@ def ship_generation(board):
 
 
 # Inspired by https://www.youtube.com/watch?v=tF1WRCrd_HQ
-def user_guess(board):
+def user_guess():
     """Player guess for their move"""
     row = input("Make a guess for the row (a-f): ").lower()
     while row not in "abcdef":
@@ -73,7 +73,7 @@ def user_guess(board):
     while column not in "123456":
         print("Invalid input. Please redo.")
         column = input("Make a guess for the column (1-6): ")
-    return int(column) -1, convert_guess_to_numbers[row] -1
+    return int(column), convert_guess_to_numbers[row]
 
 
 convert_guess_to_numbers = {
@@ -85,7 +85,7 @@ def move_validation(guess, board):
     moves = []
     turns = 15
     while turns > 0:
-        row, column = user_guess(board)
+        row, column = user_guess()
         guess = row + column
         if board1[row][column] == "X":
             print(f"You hit one battleship and it sunk. Congratulations!")
@@ -97,10 +97,6 @@ def move_validation(guess, board):
             board2[row][column] = "O"
             moves.append(guess)
             turns -= 1
-        elif row < 1 or row > 6:
-            print(f"Invalid guess. Please try again.")
-        elif column < 1 or column > 6:
-            print(f"Invalid guess. Please try again.")
         else:
             print(f"You already tried this one. Please try again.")     
         if ship_sunk_count(board) == 6:
@@ -130,12 +126,12 @@ def main():
     board1 = board_creation()
     global board2
     board2 = board_creation()
-    ship_generation(board1)
+    #ship_generation(board1)
     print(f"{user}'s board")
     style_board(board1)
     print(f"Guess board")
     style_board(board2)
-    guess = user_guess(board2)
+    guess = user_guess()
     move_validation(guess, board2)
     
 main()
