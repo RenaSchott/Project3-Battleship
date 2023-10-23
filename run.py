@@ -10,18 +10,18 @@ WELCOME = pyfiglet.figlet_format("Welcome to Battleship!")
 def display_homepage():
     """Starting question asked"""
     start = input(f"Do you want to start the game (y/n)?")
-    try:
-        if start == "y":
-            print(f"Have fun!")
-        elif start == "n":
-            print(f"Sadly, you won't play the game")
-            sys.exit(0)
-        elif start == "":
-            print (f"You had to answer the question. Please restart the game.")
-            sys.exit(0)
-    except ValueError as e: 
-        print(f"Only y or n are allowed") 
+    if start == "y":
+        print(f"Have fun!")
+    elif start == "n":
+        print(f"Sadly, you won't play the game")
         sys.exit(0)
+    elif start == "":
+        print (f"You had to answer the question. Please restart the game.")
+        sys.exit(0)
+    else:
+        while start != "y" or start != "n":
+            print("Invalid input. Please redo.")
+            start = input(f"Do you want to start the game (y/n)?")
     return start
 
 
@@ -37,17 +37,17 @@ def get_username():
 def explain_rules():
     """Explain game rules if needed"""
     rules = input(f"Do you need the game rules (y/n)?")
-    try:
-        if rules == "y":
-            print(f"This is a simplified version of the normal battleship game. Therefore 6 ships are randomly distributed on the game board and your task is to find them by guessing a row and a column. When you hit all 6 ships you win. But therefore you only have 15 valid tries. Otherwise you loose the game.")
-        elif rules == "n":
-            print(f"Have fun!")
-        elif rules == "":
-            print(f"You had to answer the question. Please restart the game.")
-            sys.exit(0)
-    except ValueError as e: 
-        print(f"Only y or n are allowed") 
+    if rules == "y":
+        print(f"This is a simplified version of the normal battleship game. Therefore 6 ships are randomly distributed on the game board and your task is to find them by guessing a row and a column. When you hit all 6 ships you win. But therefore you only have 15 valid tries. Otherwise you loose the game.")
+    elif rules == "n":
+        print(f"Have fun!")
+    elif rules == "":
+        print(f"You had to answer the question. Please restart the game.")
         sys.exit(0)
+    else:
+        while start != "y" or start != "n":
+            print("Invalid input. Please redo.")
+            start = input(f"Do you want to start the game (y/n)?")
     return rules
 
 
@@ -145,7 +145,7 @@ def run_game():
 
 def end_game():
     """
-    
+
     """
     pass 
 
