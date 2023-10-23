@@ -84,6 +84,7 @@ convert_guess_to_numbers = {
 def move_validation():
     moves = []
     turns = 15
+    sunken1 = 0
     while turns > 0:
         row, column = user_guess()
         guess = str(row) + str(column)
@@ -113,7 +114,7 @@ def move_validation():
 #def ship_sunk_count(board1):
     #count = 0
     #for row in board1:
-        f#or column in row: 
+        #for column in row: 
           #  if column =="X":
              #   count += 1
    # return count
@@ -127,8 +128,6 @@ def main():
     board1 = board_creation()
     global board2
     board2 = board_creation()
-    global sunken1
-    sunken1 = 0
     ship_generation(board1)
     print(f"{user}'s board")
     style_board(board1)
