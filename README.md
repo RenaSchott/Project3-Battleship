@@ -138,7 +138,8 @@ There is the possibility to integrate
 - Libraries 
     -
 - Moduls
-    -
+    - Random
+    - Pyfiglet
 - Programs
     - Balsamiq
         - was used to create the wireframes
