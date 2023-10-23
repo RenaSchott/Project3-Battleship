@@ -96,7 +96,7 @@ def generate_ships(board):
 
 
 # Inspired by https://www.youtube.com/watch?v=tF1WRCrd_HQ
-def run_game():
+def guess_by_user():
     """Player guess for their move"""
     row = input("Make a guess for the row (a-f): ").lower()
     while row not in "abcdef":
@@ -114,13 +114,13 @@ convert_guess_to_numbers = {
 
 
 # Inspired by https://www.youtube.com/watch?v=tF1WRCrd_HQ
-def move_validation():
+def run_game():
     moves = []
     turns = 15
     sunken1 = 0
     while turns > 0:
-        style_board(board1)
-        row, column = user_guess()
+        print_board(board1)
+        row, column = guess_by_user()
         guess = str(row) + str(column)
         if board1[row][column] == "X":
             print(f"You hit one battleship and it sunk. Congratulations!")
@@ -142,7 +142,12 @@ def move_validation():
         if turns == 0:
             print("Sorry! Game over! You lost.")
             break
+
+def end_game():
+    """
     
+    """
+    pass 
 
 def main():
     print(WELCOME)
