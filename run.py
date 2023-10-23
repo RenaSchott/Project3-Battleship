@@ -62,7 +62,7 @@ def ship_generation(board):
         board[ship_row][ship_column] = "X"
 
 
-# Inspired by https://www.youtube.com/watch?v=RqCZBbfd9Fw
+# Inspired by https://www.youtube.com/watch?v=tF1WRCrd_HQ
 def user_guess(board):
     """Player guess for their move"""
     row = input("Make a guess for the row (a-f): ").lower()
@@ -70,7 +70,7 @@ def user_guess(board):
         print("Invalid input. Please redo.")
         row = input("Make a guess for the row (a-f): ").lower()
     column = input("Make a guess for the column (1-6): ")
-    while row not in "123456":
+    while column not in "123456":
         print("Invalid input. Please redo.")
         column = input("Make a guess for the column (1-6): ")
     return int(column) -1, convert_guess_to_numbers[row] -1
@@ -87,6 +87,8 @@ def move_validation(guess, board):
     while turns > 0:
         row, column = user_guess(board)
         guess = row + column
+        board1 = board_creation()
+        board2 = board_creation()
         if board1[row][column] == "X":
             print(f"You hit one battleship and it sunk. Congratulations!")
             board2[row][column] = "*"
