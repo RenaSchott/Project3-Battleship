@@ -90,13 +90,13 @@ def move_validation():
         guess = str(row) + str(column)
         if board1[row][column] == "X":
             print(f"You hit one battleship and it sunk. Congratulations!")
-            board2[row][column] = "*"
+            board1[row][column] = "*"
             moves.append(guess)
             sunken1 += 1
             turns -= 1
         elif guess not in moves:
             print(f"There is no battleship!")
-            board2[row][column] = "O"
+            board1[row][column] = "O"
             moves.append(guess)
             turns -= 1
         else:
@@ -116,13 +116,13 @@ def main():
     user = username()
     global board1
     board1 = board_creation()
-    global board2
-    board2 = board_creation()
+    #global board2
+    #board2 = board_creation()
     ship_generation(board1)
     print(f"{user}'s board")
     style_board(board1)
-    print(f"Guess board")
-    style_board(board2)
+    #print(f"Guess board")
+    #style_board(board2)
     move_validation()
     
 main()
