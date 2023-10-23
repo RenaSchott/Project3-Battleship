@@ -1,20 +1,24 @@
 import pyfiglet
 from random import randint
+import sys
 
 # Inspired by https://www.geeksforgeeks.org/python-ascii-art-using-pyfiglet-module/
 WELCOME = pyfiglet.figlet_format("Welcome to Battleship!")
 
+
+# Inspired by https://www.freecodecamp.org/news/python-exit-how-to-use-an-exit-function-in-python-to-stop-a-program/
 def display_homepage():
     """Starting question asked"""
     start = input("Do you want to start the game (y/n)?")
     try:
-        if start === y:
-            continue
-        elif start === n:
-            start = input("Do you want to start the game (y/n)?")
-    except:
-        TypeError("Only y or n are allowed.")
-
+        if start == "y":
+            print(f"Have fun!")
+        elif start == "n":
+            print("Sadly, you won't play the game")
+            sys.exit(0)
+    except ValueError as e: 
+        print("Only y or n are allowed") 
+        sys.exit(0)
     return start
 
 
@@ -119,17 +123,17 @@ def move_validation():
 
 def main():
     print(WELCOME)
-    starting_question()
-    user = username()
+    display_homepage()
+    user = get_username()
     #global board1
     board1 = create_board()
     #global board2
     #board2 = board_creation()
     board1 = generate_ships(board1)
     print(f"{user}'s board")
-    style_board(board1)
+    print_board(board1)
     #print(f"Guess board")
     #style_board(board2)
-    move_validation()
+    run_game()
     
 main()

@@ -196,8 +196,10 @@ The content of this project was inspired by the Love Sandwiches project and the 
   - <https://www.w3schools.com/>
   - <https://www.youtube.com/watch?v=RqCZBbfd9Fw>
   - <https://www.youtube.com/watch?v=tF1WRCrd_HQ>
+
 Inspirations for specific problems were taken from the following websites:
   - <https://www.geeksforgeeks.org/python-ascii-art-using-pyfiglet-module/>
+  - <https://www.freecodecamp.org/news/python-exit-how-to-use-an-exit-function-in-python-to-stop-a-program/>
  
 
 ### Media
