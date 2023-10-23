@@ -4,6 +4,7 @@
 import pyfiglet
 from random import randint
 
+# Inspired by https://www.geeksforgeeks.org/python-ascii-art-using-pyfiglet-module/
 WELCOME = pyfiglet.figlet_format("Welcome to Battleship!")
 
 def starting_question():
@@ -18,6 +19,7 @@ def username():
     return username
 
 
+# Inspired by https://www.youtube.com/watch?v=RqCZBbfd9Fw
 def board_creation():
     """Create boards for the game battleship"""
     board = [
@@ -32,6 +34,7 @@ def board_creation():
     return board
 
 
+# Inspired by https://www.youtube.com/watch?v=RqCZBbfd9Fw
 def style_board(board):
     """Give game boards the proper styling"""
     print(f" {board[0][0]} | {board[0][1]} | {board[0][2]} | {board[0][3]} | {board[0][4]} | {board[0][5]} | {board[0][6]} ")
@@ -49,6 +52,7 @@ def style_board(board):
     print(f" {board[6][0]} | {board[6][1]} | {board[6][2]} | {board[6][3]} | {board[6][4]} | {board[6][5]} | {board[6][6]} ")
     
 
+# Inspired by https://www.youtube.com/watch?v=tF1WRCrd_HQ
 def ship_generation(board):
     """Create random ships for the game"""
     for ship in range(6):
@@ -58,6 +62,7 @@ def ship_generation(board):
         board[ship_row][ship_column] = "X"
 
 
+# Inspired by https://www.youtube.com/watch?v=RqCZBbfd9Fw
 def user_guess(board, player):
     """Player guess for their move"""
     guess = input("Make a guess(e.g. a1 or f3): ")
@@ -137,6 +142,8 @@ def user_guess(board, player):
         print(f"Invalid guess: '{guess}'. Please try again.")
     return guess
 
+
+# Inspired by https://www.youtube.com/watch?v=tF1WRCrd_HQ
 def move_validation(guess, board):
     moves = []
     turns = 15
@@ -159,11 +166,12 @@ def move_validation(guess, board):
             print(f"Congratulations! You won.") 
             break    
         print("You can try " + str(turns) + " more times.")
-        if turns = 0:
+        if turns == 0:
             print("Sorry! Game over! You lost.")
             break
     
 
+# Inspired by https://www.youtube.com/watch?v=tF1WRCrd_HQ
 def ship_sunk_count(board):
     count = 0
     for row in board:
@@ -176,13 +184,13 @@ def ship_sunk_count(board):
 def main():
     print(WELCOME)
     starting_question()
-    username()
+    user = username()
     board1 = board_creation()
     board2 = board_creation()
     ship_generation(board1)
     ship_generation(board2)
     player = "x"
-    print(f"Your board")
+    print(f"{user}'s board")
     style_board(board1)
     print(f"Opponent's board")
     style_board(board2)
