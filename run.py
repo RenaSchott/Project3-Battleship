@@ -16,6 +16,9 @@ def display_homepage():
         elif start == "n":
             print("Sadly, you won't play the game")
             sys.exit(0)
+        elif start == "":
+            print ("You had to answer the question. Please restart the game.")
+            sys.exit(0)
     except ValueError as e: 
         print("Only y or n are allowed") 
         sys.exit(0)
