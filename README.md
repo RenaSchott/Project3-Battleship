@@ -149,6 +149,8 @@ There is the possibility to integrate
         - was used to store the project site
     - Gitpod
         - was used to write the code and commit it to GitHub
+    - Heroku 
+        - was used to deploy the project 
 
 
 - Am I responsive
