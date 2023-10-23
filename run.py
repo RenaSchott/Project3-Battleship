@@ -8,7 +8,15 @@ WELCOME = pyfiglet.figlet_format("Welcome to Battleship!")
 
 # Inspired by https://www.freecodecamp.org/news/python-exit-how-to-use-an-exit-function-in-python-to-stop-a-program/
 def display_homepage():
-    """Starting question asked"""
+    """
+    Question asked whether the user want to play the game.
+ 
+    Args:
+        none
+ 
+    Returns:
+        start = Answer to the question
+    """
     start = input(f"Do you want to start the game (y/n)?")
     if start == "y":
         print(f"Have fun!")
@@ -26,7 +34,15 @@ def display_homepage():
 
 
 def get_username():
-    """Ask for the username"""
+    """
+    User is asked for their name.
+ 
+    Args:
+        none
+ 
+    Returns:
+        username = Answer to the question
+    """
     username = input(f"A name is needed for playing the game. What is your name?")
     if username == "":
         print(f"A username is needed for playing the game. Please restart the game.")
@@ -35,7 +51,15 @@ def get_username():
 
 
 def explain_rules():
-    """Explain game rules if needed"""
+    """
+    User is asked whether a rule explanation is needed,
+ 
+    Args:
+        none
+ 
+    Returns:
+        rules = Game rules
+    """
     rules = input(f"Do you need the game rules (y/n)?")
     if rules == "y":
         print(f"This is a simplified version of the normal battleship game. Therefore 6 ships are randomly distributed on the game board and your task is to find them by guessing a row and a column. When you hit all 6 ships you win. But therefore you only have 15 valid tries. Otherwise you loose the game.")
@@ -53,7 +77,15 @@ def explain_rules():
 
 # Inspired by https://www.youtube.com/watch?v=RqCZBbfd9Fw
 def create_board():
-    """Create boards for the game battleship"""
+    """
+    Creates the board for the battleship game 
+ 
+    Args:
+        none
+ 
+    Returns:
+        board = battleship game board
+    """
     board = [
         [" ", 1, 2, 3, 4, 5, 6], 
         ["a", " ", " ", " ", " ", " ", " ",],
@@ -68,7 +100,15 @@ def create_board():
 
 # Inspired by https://www.youtube.com/watch?v=RqCZBbfd9Fw
 def print_board(board):
-    """Give game boards the proper styling"""
+    """
+    Printing the game board with the proper styling.
+ 
+    Args:
+        board = list from create_board()
+ 
+    Returns:
+        only print statements
+    """
     print(f" {board[0][0]} | {board[0][1]} | {board[0][2]} | {board[0][3]} | {board[0][4]} | {board[0][5]} | {board[0][6]} ")
     print(f"---|---|---|---|---|---|---")
     print(f" {board[1][0]} | {board[1][1]} | {board[1][2]} | {board[1][3]} | {board[1][4]} | {board[1][5]} | {board[1][6]} ")
@@ -86,7 +126,15 @@ def print_board(board):
 
 # Inspired by https://www.youtube.com/watch?v=tF1WRCrd_HQ
 def generate_ships(board):
-    """Create random ships for the game"""
+    """
+    Creating 6 ships and placing them randomly on the board
+ 
+    Args:
+        board = list from create_board()
+ 
+    Returns:
+        board = including ships
+    """
     for ship in range(6):
         ship_row, ship_column = randint(1, 6), randint(1,6)
         while board[ship_row][ship_column] == "X":
@@ -97,11 +145,22 @@ def generate_ships(board):
 
 # Inspired by https://www.youtube.com/watch?v=tF1WRCrd_HQ
 def guess_by_user():
-    """Player guess for their move"""
+
+    """
+    Player input for their guesses for the battleship locations
+ 
+    Args:
+        none
+ 
+    Returns:
+        convert_guess_to_numbers[row], int(column) = integers for row and column
+
+    """
     row = input("Make a guess for the row (a-f): ").lower()
     while row not in "abcdef":
         print("Invalid input. Please redo.")
         row = input("Make a guess for the row (a-f): ").lower()
+    
     column = input("Make a guess for the column (1-6): ")
     while column not in "123456":
         print("Invalid input. Please redo.")
@@ -115,6 +174,16 @@ convert_guess_to_numbers = {
 
 # Inspired by https://www.youtube.com/watch?v=tF1WRCrd_HQ
 def run_game():
+    """
+    Main game engine including the evaluation of the user input
+    
+    Args:
+        none
+ 
+    Returns:
+        Print statements on the user guess and turn count
+
+    """
     moves = []
     turns = 15
     sunken1 = 0
@@ -145,6 +214,12 @@ def run_game():
 
 def end_game():
     """
+    Defining end game conditions
+
+    Args:
+
+    Returns:
+        print statement on whether the game is won or lost.
 
     """
     pass 
@@ -164,5 +239,6 @@ def main():
     #print(f"Guess board")
     #style_board(board2)
     run_game()
+    end_game()
     
 main()
