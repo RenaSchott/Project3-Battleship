@@ -65,82 +65,15 @@ def ship_generation(board):
 # Inspired by https://www.youtube.com/watch?v=RqCZBbfd9Fw
 def user_guess(board):
     """Player guess for their move"""
-    row = input("Make a guess for the row (a-f): ")
+    row = input("Make a guess for the row (a-f): ").lower()
+    while row not in "abcdef":
+        print("Invalid input. Please redo.")
+        row = input("Make a guess for the row (a-f): ").lower()
     column = input("Make a guess for the column (1-6): ")
-    guess = row + column
-    if guess == "a1":
-        board[1][1]
-    elif guess == "a2":
-        board[1][2]
-    elif guess == "a3":
-        board[1][3]
-    elif guess == "a4":
-        board[1][4]
-    elif guess == "a5":
-        board[1][5]
-    elif guess == "a6":
-        board[1][6]
-    elif guess == "b1":
-        board[2][1]
-    elif guess == "b2":
-        board[2][2]
-    elif guess == "b3":
-        board[2][3]
-    elif guess == "b4":
-        board[2][4]
-    elif guess == "b5":
-        board[2][5]
-    elif guess == "b6":
-        board[2][6]
-    elif guess == "c1":
-        board[3][1]
-    elif guess == "c2":
-        board[3][2]
-    elif guess == "c3":
-        board[3][3]
-    elif guess == "c4":
-        board[3][4]
-    elif guess == "c5":
-        board[3][5]
-    elif guess == "c6":
-        board[3][6]
-    elif guess == "d1":
-        board[4][1]
-    elif guess == "d2":
-        board[4][2]
-    elif guess == "d3":
-        board[4][3]
-    elif guess == "d4":
-        board[4][4]
-    elif guess == "d5":
-        board[4][5]
-    elif guess == "d6":
-        board[4][6]
-    elif guess == "e1":
-        board[5][1]
-    elif guess == "e2":
-        board[5][2]
-    elif guess == "e3":
-        board[5][3]
-    elif guess == "e4":
-        board[5][4]
-    elif guess == "e5":
-        board[5][5]
-    elif guess == "e6":
-        board[5][6]
-    elif guess == "f1":
-        board[6][1]
-    elif guess == "f2":
-        board[6][2]
-    elif guess == "f3":
-        board[6][3]
-    elif guess == "f4":
-        board[6][4]
-    elif guess == "f5":
-        board[6][5]
-    elif guess == "f6":
-        board[6][6]
-    return guess, row, column, convert_guess_to_numbers[row]
+    while row not in "123456":
+        print("Invalid input. Please redo.")
+        column = input("Make a guess for the column (1-6): ")
+    return int(column) -1, convert_guess_to_numbers[row] -1
 
 
 convert_guess_to_numbers = {
@@ -153,16 +86,16 @@ def move_validation(guess, board):
     turns = 15
     while turns > 0:
         row, column = user_guess(board)
-        assumption = convert_guess_to_numbers[guess]
+        guess = row + column
         if board1[row][column] == "X":
             print(f"You hit one battleship and it sunk. Congratulations!")
             board2[row][column] = "*"
-            moves.append(assumption)
+            moves.append(guess)
             turns -= 1
         elif guess not in moves:
             print(f"There is no battleship!")
             board2[row][column] = "O"
-            moves.append(assumption)
+            moves.append(guess)
             turns -= 1
         elif row not in 123456:
             print(f"Invalid guess. Please try again.")
