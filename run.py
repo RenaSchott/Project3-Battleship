@@ -9,48 +9,44 @@ WELCOME = pyfiglet.figlet_format("Welcome to Battleship!")
 # Inspired by https://www.freecodecamp.org/news/python-exit-how-to-use-an-exit-function-in-python-to-stop-a-program/
 def display_homepage():
     """Starting question asked"""
-    start = input("Do you want to start the game (y/n)?")
+    start = input(f"Do you want to start the game (y/n)?")
     try:
         if start == "y":
             print(f"Have fun!")
         elif start == "n":
-            print("Sadly, you won't play the game")
+            print(f"Sadly, you won't play the game")
             sys.exit(0)
         elif start == "":
-            print ("You had to answer the question. Please restart the game.")
+            print (f"You had to answer the question. Please restart the game.")
             sys.exit(0)
     except ValueError as e: 
-        print("Only y or n are allowed") 
+        print(f"Only y or n are allowed") 
         sys.exit(0)
     return start
 
 
 def get_username():
     """Ask for the username"""
-    username = input("A name is needed for playing the game. What is your name?")
+    username = input(f"A name is needed for playing the game. What is your name?")
     if username == "":
-        print ("A username is needed for playing the game. Please restart the game.")
+        print(f"A username is needed for playing the game. Please restart the game.")
         sys.exit(0)
     return username
 
 
 def explain_rules():
     """Explain game rules if needed"""
-    rules = input("Do you need the game rules (y/n)?")
+    rules = input(f"Do you need the game rules (y/n)?")
     try:
-        if start == "y":
-            print(f"This is a simplified version of the normal battleship game.
-            Therefore 6 ships are randomly distributed on the game board and 
-            your task is to find them by guessing a row and a column. When you 
-            hit all 6 ships you win. But therefore you only have 15 valid 
-            tries. Otherwise you loose the game.")
-        elif start == "n":
-            print("Have fun!")
-        elif start == "":
-            print ("You had to answer the question. Please restart the game.")
+        if rules == "y":
+            print(f"This is a simplified version of the normal battleship game. Therefore 6 ships are randomly distributed on the game board and your task is to find them by guessing a row and a column. When you hit all 6 ships you win. But therefore you only have 15 valid tries. Otherwise you loose the game.")
+        elif rules == "n":
+            print(f"Have fun!")
+        elif rules == "":
+            print(f"You had to answer the question. Please restart the game.")
             sys.exit(0)
     except ValueError as e: 
-        print("Only y or n are allowed") 
+        print(f"Only y or n are allowed") 
         sys.exit(0)
     return rules
 
