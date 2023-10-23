@@ -143,22 +143,31 @@ def user_guess(board):
     return guess
 
 
+convert_guess_to_numbers = {
+    "a1": 11, "a2": 12, "a3": 13, "a4": 14, "a5": 15, "a6": 16,
+    "b1": 21, "b2": 22, "b3": 23, "b4": 24, "b5": 25, "b6": 26,
+    "c1": 31, "c2": 32, "c3": 33, "c4": 34, "c5": 35, "c6": 36,
+    "d1": 41, "d2": 42, "d3": 43, "d4": 44, "d5": 45, "d6": 46,
+    "e1": 51, "e2": 52, "e3": 53, "e4": 54, "e5": 55, "e6": 56,
+    "f1": 61, "f2": 62, "f3": 63, "f4": 64, "f5": 65, "f6": 66,}
+
+
 # Inspired by https://www.youtube.com/watch?v=tF1WRCrd_HQ
 def move_validation(guess, board):
     moves = []
     turns = 15
     while turns > 0:
-        print(board)
         row, column = user_guess(board)
-        if board2[row][column] == "X":
+        assumption = convert_guess_to_numbers[guess]
+        if board1[row][column] == "X":
             print(f"You hit one battleship and it sunk. Congratulations!")
-            board1[row][column] = "*"
-            moves.append(guess)
+            board2[row][column] = "*"
+            moves.append(assumption)
             turns -= 1
         elif guess not in moves:
             print(f"There is no battleship!")
-            board1[row][column] = "O"
-            moves.append(guess)
+            board2[row][column] = "O"
+            moves.append(assumption)
             turns -= 1
         else:
             print(f"You already tried this one. Please try again.")     
@@ -187,17 +196,12 @@ def main():
     user = username()
     board1 = board_creation()
     board2 = board_creation()
-    #ship_generation(board1)
-    ship_generation(board2)
-    player = "x"
+    ship_generation(board1)
     print(f"{user}'s board")
     style_board(board1)
-    print(f"Opponent's board")
+    print(f"Guess board")
     style_board(board2)
     guess = user_guess(board2)
     move_validation(guess, board2)
-    move_validation(guess, board1)
-    #style_board(board2)
-
-
+    
 main()
