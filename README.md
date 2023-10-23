@@ -191,7 +191,7 @@ There is the possibility to integrate
 
 ## Deployment
 
-The deployment was done using <>
+The deployment was done using <https://www.heroku.com/>
 
 - 
 The link to the live page can be found here: [Battleship] (<>)
