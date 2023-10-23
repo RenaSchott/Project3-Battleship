@@ -27,7 +27,10 @@ def display_homepage():
 
 def get_username():
     """Ask for the username"""
-    username = input("What is your name?")
+    username = input("A name is needed for playing the game. What is your name?")
+    if username == "":
+        print ("A username is needed for playing the game. Please restart the game.")
+        sys.exit(0)
     return username
 
 
