@@ -87,8 +87,6 @@ def move_validation(guess, board):
     while turns > 0:
         row, column = user_guess(board)
         guess = row + column
-        board1 = board_creation()
-        board2 = board_creation()
         if board1[row][column] == "X":
             print(f"You hit one battleship and it sunk. Congratulations!")
             board2[row][column] = "*"
@@ -128,7 +126,9 @@ def main():
     print(WELCOME)
     starting_question()
     user = username()
+    global board1
     board1 = board_creation()
+    global board2
     board2 = board_creation()
     ship_generation(board1)
     print(f"{user}'s board")
