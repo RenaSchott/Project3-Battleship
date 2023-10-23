@@ -87,11 +87,19 @@ Here is the previously outlined flow chart:
 
 #### POC (prove of concept)
 
-- 
+- User input → start game
+- Display boards
+- User guess input
+- Evaluation → showing result
+- Move repetition
 
 #### MVP (minimum viable product)
 
-- 
+- Welcome screen
+- Want to play message and link to rules
+- Random placement of battleships
+- End of game conditions
+- End screen -> announcing winner
 
 ## Features
 
@@ -106,7 +114,14 @@ Here is the previously outlined flow chart:
 There is the possibility to integrate
 
 - **V2 (version 2)**
-  - 
+  - Styling (colorama?)
+  - Board size options
+  - Placing Battleships
+  - Number and ship sizes
+  - Opponent turn
+    - Random opponent guess
+  - Evaluation → showing result
+  - Display board with battleships
 
 
 
