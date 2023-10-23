@@ -11,7 +11,7 @@ Tick Tack toe
 ![]()
 ![]()
 
-Being interested in different games, this Python challenge was an interestint experience. This game should be fun if the user likes those kind of games.
+Being interested in different games, this Python challenge was an interesting experience. The game should be fun for all user liking those kind of games.
 
 View the live project here: <>
 
@@ -81,7 +81,7 @@ Here are the drawings of the wireframes:
 
 Here is the previously outlined flow chart:
 
-![Drawn flow chart of the project](assets/readme-images/flow-chart.png)
+![Drawn flow chart of the project](assets/readmeimages/flow-chart.png)
 
 ### Method
 
