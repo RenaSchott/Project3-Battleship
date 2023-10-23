@@ -34,6 +34,27 @@ def get_username():
     return username
 
 
+def explain_rules():
+    """Explain game rules if needed"""
+    rules = input("Do you need the game rules (y/n)?")
+    try:
+        if start == "y":
+            print(f"This is a simplified version of the normal battleship game.
+            Therefore 6 ships are randomly distributed on the game board and 
+            your task is to find them by guessing a row and a column. When you 
+            hit all 6 ships you win. But therefore you only have 15 valid 
+            tries. Otherwise you loose the game.")
+        elif start == "n":
+            print("Have fun!")
+        elif start == "":
+            print ("You had to answer the question. Please restart the game.")
+            sys.exit(0)
+    except ValueError as e: 
+        print("Only y or n are allowed") 
+        sys.exit(0)
+    return rules
+
+
 # Inspired by https://www.youtube.com/watch?v=RqCZBbfd9Fw
 def create_board():
     """Create boards for the game battleship"""
@@ -131,6 +152,7 @@ def main():
     print(WELCOME)
     display_homepage()
     user = get_username()
+    explain_rules()
     #global board1
     board1 = create_board()
     #global board2
