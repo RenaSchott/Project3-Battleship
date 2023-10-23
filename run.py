@@ -65,7 +65,9 @@ def ship_generation(board):
 # Inspired by https://www.youtube.com/watch?v=RqCZBbfd9Fw
 def user_guess(board):
     """Player guess for their move"""
-    guess = input("Make a guess(e.g. a1 or f3): ")
+    row = input("Make a guess for the row (a-f): ")
+    column = input("Make a guess for the column (1-6): ")
+    guess = row + column
     if guess == "a1":
         board[1][1]
     elif guess == "a2":
@@ -138,26 +140,19 @@ def user_guess(board):
         board[6][5]
     elif guess == "f6":
         board[6][6]
-    else:
-        print(f"Invalid guess: '{guess}'. Please try again.")
-    return guess
+    return guess, row, column
 
 
 convert_guess_to_numbers = {
-    "a1": 11, "a2": 12, "a3": 13, "a4": 14, "a5": 15, "a6": 16,
-    "b1": 21, "b2": 22, "b3": 23, "b4": 24, "b5": 25, "b6": 26,
-    "c1": 31, "c2": 32, "c3": 33, "c4": 34, "c5": 35, "c6": 36,
-    "d1": 41, "d2": 42, "d3": 43, "d4": 44, "d5": 45, "d6": 46,
-    "e1": 51, "e2": 52, "e3": 53, "e4": 54, "e5": 55, "e6": 56,
-    "f1": 61, "f2": 62, "f3": 63, "f4": 64, "f5": 65, "f6": 66,}
+    "a": 1, "b": 2, "c": 3, "d": 4, "e": 5, "f": 6}
 
 
 # Inspired by https://www.youtube.com/watch?v=tF1WRCrd_HQ
-def move_validation(guess, board1, board2):
+def move_validation(guess, board):
     moves = []
     turns = 15
     while turns > 0:
-        row, column = user_guess(board1)
+        row, column = user_guess(board)
         assumption = convert_guess_to_numbers[guess]
         if board1[row][column] == "X":
             print(f"You hit one battleship and it sunk. Congratulations!")
@@ -169,6 +164,10 @@ def move_validation(guess, board1, board2):
             board2[row][column] = "O"
             moves.append(assumption)
             turns -= 1
+        elif row not in 123456:
+            print(f"Invalid guess. Please try again.")
+        elif column not in 123456:
+            print(f"Invalid guess. Please try again.")
         else:
             print(f"You already tried this one. Please try again.")     
         if ship_sunk_count(board) == 6:
@@ -202,6 +201,6 @@ def main():
     print(f"Guess board")
     style_board(board2)
     guess = user_guess(board2)
-    move_validation(guess, board1, board2)
+    move_validation(guess, board2)
     
 main()
