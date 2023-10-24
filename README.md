@@ -191,7 +191,11 @@ There is the possibility to integrate
 
 | **Expectation - User** | **Result**|
 |--------------|------------|
-
+| I want to play a game of battleship | The game is working |
+| I want to have fun | If the user likes those kind of game it should be fun |
+| I want to be entertained | The game is entertaining |
+| I want to be able to have a good overview | The board and all important comments can be seen in the window without scrolling |
+ 
 
 **As the administrator**
 
