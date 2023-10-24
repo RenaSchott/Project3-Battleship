@@ -62,7 +62,10 @@ def explain_rules():
     """
     rules = input(f"Do you need the game rules (y/n)?\n")
     if rules == "y":
-        print(f"This is a simplified version of the normal battleship game. Therefore 6 ships are randomly distributed on the game board and your task is to find them by guessing a row and a column. When you hit all 6 ships you win. But therefore you only have 15 valid tries. Otherwise you loose the game.")
+        print(f"This is a simplified version of the normal battleship game. Therefore 6 ships \n 
+        are randomly distributed on the game board and your task is to find them by guessing \n
+        a row and a column. When you hit all 6 ships you win. But therefore you only have \n
+        15 valid tries. Otherwise you loose the game.")
     elif rules == "n":
         print(f"Have fun!")
     elif rules == "":
