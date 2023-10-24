@@ -211,26 +211,13 @@ def run_game():
         else:
             print(f"You already tried this one. Please try again.")     
         print("You can try " + str(turns) + " more times.")
-        
-
-def end_game():
-    """
-    Defining end game conditions
-
-    Args:
-
-    Returns:
-        print statement on whether the game is won or lost.
-
-    """
-    sunken1 = run_game()
-    if sunken1 == 6:
-        print(f"Congratulations! You won.") 
-        sys.exit(0)    
-    
-    if turns == 0:
-        print("Sorry! Game over! You lost.")
-        sys.exit(0)
+        if sunken1 == 6:
+            print(f"Congratulations! You won.") 
+            sys.exit(0)    
+        if turns == 0:
+            print("Sorry! Game over! You lost.")
+            sys.exit(0)
+         
 
 def main():
     print(WELCOME)
@@ -244,6 +231,5 @@ def main():
     board2 = generate_ships(board2)
     print(f"{user}'s board")
     run_game()
-    end_game()
     
 main()
