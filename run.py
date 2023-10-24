@@ -53,7 +53,7 @@ def get_username():
         sys.exit(0)
     return username
 
-#Inspired by 
+#Inspired by https://www.freecodecamp.org/news/print-newline-in-python/
 def explain_rules():
     """
     User is asked whether a rule explanation is needed,
