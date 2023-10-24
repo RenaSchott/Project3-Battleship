@@ -96,7 +96,7 @@ Here is the previously outlined flow chart which contains parts of the actual pr
 
 ### Welcome screen
 
-- The welcome screen is the first thing the user sees from the battleship app. Here the large letters "Welcome to Battleship!" can be seen as well as the question "Do you want to start the game (y/n)?. The (y/n) indicates the possible input. By typing in y the user can progress with the game. While n  will stop the game from running. If the user gives any other input the user will be asked again to answer the question correct.
+- The welcome screen is the first thing the user sees from the battleship app. Here the large letters "Welcome to Battleship!" can be seen as well as the question "Do you want to start the game (y/n)?. The (y/n) indicates the possible input. By typing in y the user can progress with the game. While n  will stop the game from running. If the user gives any other input the user will be asked again to answer the question correct. The y and n answer will be autocommented.
 
 ![Screen shot of the welcome screen of the project](assets/readmeimages/welcome-screen.png)
 
@@ -108,9 +108,15 @@ Here is the previously outlined flow chart which contains parts of the actual pr
 
 ### Game rules
 
-- Since this is a short version of the battleship game the user can read the game rules if wanted. Here only n or y are accepted. Otherwise the user will be asked again.
+- Since this is a short version of the battleship game the user can read the game rules if wanted. Here only n or y are accepted. Otherwise the user will be asked again. The y and n answer will be autocommented.
 
 ![Screen shot of the question for the game rules](assets/readmeimages/rules.png)
+
+### Game board
+
+- With the username above the game board it will be personalized. On the game board the user can see the numbers 1-6 for columns and a-f for rows.
+
+![Screen shot of the personalized game board](assets/readmeimages/board.png)
 
 ### Features left to implement
 
