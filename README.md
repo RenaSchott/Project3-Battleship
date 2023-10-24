@@ -94,9 +94,11 @@ Here is the previously outlined flow chart which contains parts of the actual pr
 
 ### 
 
-### Game page
+### Welcome screen
 
-- 
+- The welcome screen is the first thing the user sees from the battleship app. Here the large letters "Welcome to Battleship!" can be seen as well as the question "Do you want to start the game (y/n)?. The (y/n) indicates the possible input. By typing in y the user can progress with the game. While n as well as an empty space will stop the game from running. If the user gives any other input the user will be asked again to answer the question correct.
+
+![Screen shot of the welcome screen of the project](assets/readmeimages/welcome-screen.png)
 
 ### Features left to implement
 
