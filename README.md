@@ -174,8 +174,17 @@ There is the possibility to integrate
 
 ### Manual testing
 
+- The site was tested on different browsers: Chrome, Firefox and Safari.
+- I confirmed that the page is readable.
+- I confirmed that questions are functioning.
+
+
 | **Feature** | **Expect** | **Action** | **Result** |
 |---------------------|--------------------|--------------------------|------------------------------|
+| Start question | User should be redirected and commented according to the users input | Input ideally y or n | Rediretion and commentation is functioning |
+| Username question | User should type a name | Input: name | User can type a name |
+| Question for game rules | User can decided whether to see the game rules or not | Input ideally y or n | Game rules are shown or not according to the users input |
+| Question for row and column | After a valid input a hit or miss should be stated and marked on the board as well as the round counter should go down till the game ends| Valid Input | Hit and miss will be marked on the board and commented and the round counter goes down till an end condition is met|
 
 
 ### Testing user stories
