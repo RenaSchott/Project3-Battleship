@@ -17,7 +17,7 @@ def display_homepage():
     Returns:
         start = Answer to the question
     """
-    start = input(f"Do you want to start the game (y/n)?")
+    start = input(f"Do you want to start the game (y/n)?\n")
     if start == "y":
         print(f"Have fun!")
     elif start == "n":
@@ -29,7 +29,7 @@ def display_homepage():
     else:
         while start != "y" or start != "n":
             print("Invalid input. Please redo.")
-            start = input(f"Do you want to start the game (y/n)?")
+            start = input(f"Do you want to start the game (y/n)?\n")
     return start
 
 
@@ -43,7 +43,7 @@ def get_username():
     Returns:
         username = Answer to the question
     """
-    username = input(f"A name is needed for playing the game. What is your name?")
+    username = input(f"A name is needed for playing the game. What is your name?\n")
     if username == "":
         print(f"A username is needed for playing the game. Please restart the game.")
         sys.exit(0)
@@ -60,7 +60,7 @@ def explain_rules():
     Returns:
         rules = Game rules
     """
-    rules = input(f"Do you need the game rules (y/n)?")
+    rules = input(f"Do you need the game rules (y/n)?\n")
     if rules == "y":
         print(f"This is a simplified version of the normal battleship game. Therefore 6 ships are randomly distributed on the game board and your task is to find them by guessing a row and a column. When you hit all 6 ships you win. But therefore you only have 15 valid tries. Otherwise you loose the game.")
     elif rules == "n":
@@ -71,7 +71,7 @@ def explain_rules():
     else:
         while start != "y" or start != "n":
             print("Invalid input. Please redo.")
-            start = input(f"Do you want to start the game (y/n)?")
+            start = input(f"Do you want to start the game (y/n)?\n")
     return rules
 
 
@@ -156,15 +156,15 @@ def guess_by_user():
         convert_guess_to_numbers[row], int(column) = integers for row and column
 
     """
-    row = input("Make a guess for the row (a-f): ").lower()
+    row = input("Make a guess for the row (a-f): \n").lower()
     while row not in "abcdef":
         print("Invalid input. Please redo.")
-        row = input("Make a guess for the row (a-f): ").lower()
+        row = input("Make a guess for the row (a-f): \n").lower()
     
-    column = input("Make a guess for the column (1-6): ")
+    column = input("Make a guess for the column (1-6): \n")
     while column not in "123456":
         print("Invalid input. Please redo.")
-        column = input("Make a guess for the column (1-6): ")
+        column = input("Make a guess for the column (1-6): \n")
     return convert_guess_to_numbers[row], int(column)
 
 
