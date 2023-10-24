@@ -49,7 +49,7 @@ def get_username():
         sys.exit(0)
     return username
 
-
+#Inspired by https://www.freecodecamp.org/news/print-newline-in-python/
 def explain_rules():
     """
     User is asked whether a rule explanation is needed,
@@ -62,10 +62,9 @@ def explain_rules():
     """
     rules = input(f"Do you need the game rules (y/n)?\n")
     if rules == "y":
-        print(f"This is a simplified version of the normal battleship game. Therefore 6 ships \n 
-        are randomly distributed on the game board and your task is to find them by guessing \n
-        a row and a column. When you hit all 6 ships you win. But therefore you only have \n
-        15 valid tries. Otherwise you loose the game.")
+        text = "This is a simplified version of the normal battleship game. Therefore 6 ships \n are randomly distributed on the game board and your task is to find them by \n guessing a row and a column. When you hit all 6 ships you win. But therefore \n you only have 15 valid tries. Otherwise you loose the game."
+        lines = text.split('\n')
+        print('\n'.join(lines))
     elif rules == "n":
         print(f"Have fun!")
     elif rules == "":
