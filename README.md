@@ -118,6 +118,12 @@ Here is the previously outlined flow chart which contains parts of the actual pr
 
 ![Screen shot of the personalized game board](assets/readmeimages/board.png)
 
+### User moves
+
+- To make a guess where a battleship could be the user has to make a valid guess for row and column. Invalid input will be stated and the question will be asked again. The move is evaluated and the program will tell the user whether it was a hit, a miss or whether the user already asked the question previously. A hit and a miss will be marked on the board with * and O and the remaining move will be stated. As long as there are still remaining moves and battleships the user will be asked again for their guess. If the moves count reaches zero the game is lost. If the user hits all battleships before that the user will win the game. Both events will be commented.
+
+![Screen shot of examplary move](assets/readmeimages/moves.png)
+
 ### Features left to implement
 
 There is the possibility to integrate
