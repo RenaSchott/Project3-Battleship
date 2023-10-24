@@ -71,13 +71,18 @@ def explain_rules():
         print('\n'.join(lines))
     elif rules == "n":
         print(f"Have fun!")
-    elif rules == "":
-        print(f"You had to answer the question. Please restart the game.")
-        sys.exit(0)
     else:
         while rules != "y" or rules != "n":
             print("Invalid input. Please redo.")
-            rules = input(f"Do you want to start the game (y/n)?\n")
+            rules = input(f"Do you need the game rules (y/n)?\n")
+            if rules == "y":
+                text = "This is a simplified version of the normal battleship game. Therefore 6 ships \n are randomly distributed on the game board and your task is to find them by \n guessing a row and a column. When you hit all 6 ships you win. But therefore \n you only have 15 valid tries. Otherwise you loose the game."
+                lines = text.split('\n')
+                print('\n'.join(lines))
+                break
+            elif rules == "n":
+                print(f"Have fun!")
+                break
     return rules
 
 
