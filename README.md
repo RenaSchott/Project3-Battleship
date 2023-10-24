@@ -102,9 +102,13 @@ Here is the previously outlined flow chart which contains parts of the actual pr
 
 ### Username
 
+- Next the game asks the user for a name. There the user can type whatever the user wants as long as something can be seen. An empty space will not be accepted and the game has to be restarted if this was a mistake.
+
 ![Screen shot of the question for the username](assets/readmeimages/name.png)
 
 ### Game rules
+
+- 
 
 ![Screen shot of the question for the game rules](assets/readmeimages/rules.png)
 
