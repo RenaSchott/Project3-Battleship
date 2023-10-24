@@ -5,7 +5,7 @@
 
 Being interested in different games, this Python challenge was an interesting experience. The game should be fun for all user liking those kind of games.
 
-View the live project here: <>
+View the live project here: <https://project3-battleship-2a9ceefa4769.herokuapp.com/>
 
 ## Table of content
 
@@ -186,7 +186,7 @@ There is the possibility to integrate
 The deployment was done using <https://www.heroku.com/>
 
 - 
-The link to the live page can be found here: [Battleship] (<>)
+The link to the live page can be found here: [Battleship] (<https://project3-battleship-2a9ceefa4769.herokuapp.com/>)
 
 ## Credits
 
