@@ -108,7 +108,7 @@ Here is the previously outlined flow chart which contains parts of the actual pr
 
 ### Game rules
 
-- 
+- Since this is a short version of the battleship game the user can read the game rules if wanted. Here only n or y are accepted. Otherwise the user will be asked again.
 
 ![Screen shot of the question for the game rules](assets/readmeimages/rules.png)
 
