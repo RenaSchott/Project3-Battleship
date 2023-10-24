@@ -1,8 +1,5 @@
 # Battleship
 
-![]()
-![]()
-
 Being interested in different games, this Python challenge was an interesting experience. The game should be fun for all user liking those kind of games.
 
 View the live project here: <https://project3-battleship-2a9ceefa4769.herokuapp.com/>
@@ -71,7 +68,7 @@ Here are the drawings of the wireframes:
 
 ### Flow Chart
 
-Here is the previously outlined flow chart:
+Here is the previously outlined flow chart which contains parts of the actual project and of version 2:
 
 ![Drawn flow chart of the project](assets/readmeimages/flow-chart.png)
 
