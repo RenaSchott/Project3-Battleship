@@ -23,13 +23,17 @@ def display_homepage():
     elif start == "n":
         print(f"Sadly, you won't play the game")
         sys.exit(0)
-    elif start == "":
-        print (f"You had to answer the question. Please restart the game.")
-        sys.exit(0)
     else:
         while start != "y" or start != "n":
             print("Invalid input. Please redo.")
             start = input(f"Do you want to start the game (y/n)?\n")
+            if start == "y":
+                print(f"Have fun!")
+                break
+            elif start == "n":
+                print(f"Sadly, you won't play the game")
+                sys.exit(0)
+                break
     return start
 
 
@@ -73,7 +77,7 @@ def explain_rules():
     else:
         while rules != "y" or rules != "n":
             print("Invalid input. Please redo.")
-            start = input(f"Do you want to start the game (y/n)?\n")
+            rules = input(f"Do you want to start the game (y/n)?\n")
     return rules
 
 
