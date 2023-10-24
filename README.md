@@ -4,6 +4,7 @@ Being interested in different games, this Python challenge was an interesting ex
 
 View the live project here: <https://project3-battleship-2a9ceefa4769.herokuapp.com/>
 
+
 ## Table of content
 
 - [Battleship](#battleship)
@@ -36,6 +37,7 @@ View the live project here: <https://project3-battleship-2a9ceefa4769.herokuapp.
     - [Media](#media)
   - [Acknowledgements](#acknowledgements)
 
+
 ## UX
 
 ### Site goals
@@ -65,7 +67,6 @@ Here are the drawings of the wireframes:
 ![Drawing of welcome page](assets/readmeimages/wireframe1.png)
 ![Drawing of exemplary game set up](assets/readmeimages/wireframe2.png)
 
-
 ### Flow Chart
 
 Here is the previously outlined flow chart which contains parts of the actual project and of version 2:
@@ -90,9 +91,8 @@ Here is the previously outlined flow chart which contains parts of the actual pr
 - End of game conditions
 - End screen -> announcing winner
 
-## Features
 
-### 
+## Features
 
 ### Welcome screen
 
@@ -139,7 +139,6 @@ There is the possibility to integrate
   - Display board with battleships
 
 
-
 ## Used Technologies
 
 ### Languages Used
@@ -178,14 +177,12 @@ There is the possibility to integrate
 - I confirmed that the page is readable.
 - I confirmed that questions are functioning.
 
-
 | **Feature** | **Expect** | **Action** | **Result** |
 |---------------------|--------------------|--------------------------|------------------------------|
 | Start question | User should be redirected and commented according to the users input | Input ideally y or n | Rediretion and commentation is functioning |
 | Username question | User should type a name | Input: name | User can type a name |
 | Question for game rules | User can decided whether to see the game rules or not | Input ideally y or n | Game rules are shown or not according to the users input |
 | Question for row and column | After a valid input a hit or miss should be stated and marked on the board as well as the round counter should go down till the game ends| Valid Input | Hit and miss will be marked on the board and commented and the round counter goes down till an end condition is met|
-
 
 ### Testing user stories
 
@@ -201,7 +198,10 @@ There is the possibility to integrate
 
 | **Expectation - Administrator** | **Result**|
 |--------------|------------|
-
+| I want to be able to adjust the game if needed | Everything is commented for easy adjustments |
+| I want to be able to expand the game | The game can be expanded easily |
+| I want to be able to easily add new option to the game | New options can be implemented as well |
+| I want to be able to easily add new features to the existing game | New Features can be implemented |
 
 ### Validator testing
 
