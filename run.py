@@ -160,9 +160,15 @@ def guess_by_user():
     while row not in "abcdef":
         print("Invalid input. Please redo.")
         row = input("Make a guess for the row (a-f): \n").lower()
-    
+    while row == "":
+        print("Invalid input. Please redo.")
+        row = input("Make a guess for the row (a-f): \n").lower()
+   
     column = input("Make a guess for the column (1-6): \n")
     while column not in "123456":
+        print("Invalid input. Please redo.")
+        column = input("Make a guess for the column (1-6): \n")
+    while column == "":
         print("Invalid input. Please redo.")
         column = input("Make a guess for the column (1-6): \n")
     return convert_guess_to_numbers[row], int(column)
@@ -191,7 +197,7 @@ def run_game():
         print_board(board1)
         row, column = guess_by_user()
         guess = str(row) + str(column)
-        if board1[row][column] == "X":
+        if board2[row][column] == "X":
             print(f"You hit one battleship and it sunk. Congratulations!")
             board1[row][column] = "*"
             moves.append(guess)
@@ -233,14 +239,10 @@ def main():
     explain_rules()
     global board1
     board1 = create_board()
-    
-    #global board2
-    #board2 = board_creation()
-    board1 = generate_ships(board1)
+    global board2
+    board2 = create_board()
+    board2 = generate_ships(board2)
     print(f"{user}'s board")
-    print_board(board1)
-    #print(f"Guess board")
-    #style_board(board2)
     run_game()
     end_game()
     
