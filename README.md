@@ -166,6 +166,8 @@ There is the possibility to integrate
         - was used to write the code and commit it to GitHub
     - Heroku 
         - was used to deploy the project 
+    - CI Python Linter
+        - was used for finding errors
     - Languagetool
         - was used to check the spelling and grammar in the README file.
   
@@ -205,12 +207,20 @@ There is the possibility to integrate
 
 ### Validator testing
 
-- **Python**
+- **CI Python Linter**
 
+![Screen shot of first part of the pep8 evaluation](assets/readmeimages/linter1.png)
+![Screen shot of second part of the pep8 evaluation](assets/readmeimages/linter2.png)
+![Screen shot of third part of the pep8 evaluation](assets/readmeimages/linter3.png)
+![Screen shot of fourth part of the pep8 evaluation](assets/readmeimages/linter4.png)
+
+- **Lighthouse**
+
+![Screen shot of lighthouse evaluation](assets/readmeimages/light.png)
 
 ### Unfixed bugs
 
-- 
+- The comments are acceptable.
 
 ## Deployment
 

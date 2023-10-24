@@ -53,7 +53,7 @@ def get_username():
         sys.exit(0)
     return username
 
-#Inspired by https://www.freecodecamp.org/news/print-newline-in-python/
+# Inspired by https://www.freecodecamp.org/news/print-newline-in-python/
 def explain_rules():
     """
     User is asked whether a rule explanation is needed,
@@ -89,7 +89,7 @@ def explain_rules():
 # Inspired by https://www.youtube.com/watch?v=RqCZBbfd9Fw
 def create_board():
     """
-    Creates the board for the battleship game 
+    Creates the board for the battleship game
  
     Args:
         none
@@ -98,7 +98,7 @@ def create_board():
         board = battleship game board
     """
     board = [
-        [" ", 1, 2, 3, 4, 5, 6], 
+        [" ", 1, 2, 3, 4, 5, 6],
         ["a", " ", " ", " ", " ", " ", " ",],
         ["b", " ", " ", " ", " ", " ", " ",],
         ["c", " ", " ", " ", " ", " ", " ",],
@@ -220,11 +220,11 @@ def run_game():
             moves.append(guess)
             turns -= 1
         else:
-            print(f"You already tried this one. Please try again.")     
+            print(f"You already tried this one. Please try again.")
         print("You can try " + str(turns) + " more times.")
         if sunken1 == 6:
-            print(f"Congratulations! You won.") 
-            sys.exit(0)    
+            print(f"Congratulations! You won.")
+            sys.exit(0)
         if turns == 0:
             print("Sorry! Game over! You lost.")
             sys.exit(0)
