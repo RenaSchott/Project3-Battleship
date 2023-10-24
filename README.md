@@ -100,6 +100,8 @@ Here is the previously outlined flow chart which contains parts of the actual pr
 
 ![Screen shot of the welcome screen of the project](assets/readmeimages/welcome-screen.png)
 
+
+
 ### Features left to implement
 
 There is the possibility to integrate

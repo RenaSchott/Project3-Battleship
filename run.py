@@ -49,7 +49,7 @@ def get_username():
         sys.exit(0)
     return username
 
-#Inspired by https://www.freecodecamp.org/news/print-newline-in-python/
+#Inspired by 
 def explain_rules():
     """
     User is asked whether a rule explanation is needed,
@@ -71,7 +71,7 @@ def explain_rules():
         print(f"You had to answer the question. Please restart the game.")
         sys.exit(0)
     else:
-        while start != "y" or start != "n":
+        while rules != "y" or rules != "n":
             print("Invalid input. Please redo.")
             start = input(f"Do you want to start the game (y/n)?\n")
     return rules
