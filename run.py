@@ -204,13 +204,8 @@ def run_game():
             turns -= 1
         else:
             print(f"You already tried this one. Please try again.")     
-        if sunken1 == 6:
-            print(f"Congratulations! You won.") 
-            break    
         print("You can try " + str(turns) + " more times.")
-        if turns == 0:
-            print("Sorry! Game over! You lost.")
-            break
+        
 
 def end_game():
     """
@@ -222,15 +217,23 @@ def end_game():
         print statement on whether the game is won or lost.
 
     """
-    pass 
+    sunken1 = run_game()
+    if sunken1 == 6:
+        print(f"Congratulations! You won.") 
+        sys.exit(0)    
+    
+    if turns == 0:
+        print("Sorry! Game over! You lost.")
+        sys.exit(0)
 
 def main():
     print(WELCOME)
     display_homepage()
     user = get_username()
     explain_rules()
-    #global board1
+    global board1
     board1 = create_board()
+    
     #global board2
     #board2 = board_creation()
     board1 = generate_ships(board1)
