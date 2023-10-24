@@ -224,9 +224,18 @@ There is the possibility to integrate
 
 ## Deployment
 
-The deployment was done using <https://www.heroku.com/>
+The deployment was done after the tutorial in the course content using <https://www.heroku.com/>.
 
-- 
+For deployment:
+- A Heroku account must be created.
+- Set your GitHub repository to public.
+- Create a new app in Heroku with the following settings:
+  - Add Python and NodeJS (in this order!)
+  - Add PORT as key and 8000 as value
+- The Heroku App must be linked to the correct repo in GitHub
+- Choose Automatic Deploys for easier handling.
+- Then deploy
+ 
 The link to the live page can be found here: [Battleship] (<https://project3-battleship-2a9ceefa4769.herokuapp.com/>)
 
 ## Credits
