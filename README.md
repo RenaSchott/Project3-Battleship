@@ -149,12 +149,13 @@ There is the possibility to integrate
 ### Framework, Libraries and Programs
 
 - Frameworks 
-    -
+    - None
 - Libraries 
-    -
+    - None
 - Moduls
     - Random
     - Pyfiglet
+    - Sys
 - Programs
     - Balsamiq
         - was used to create the wireframes
@@ -166,12 +167,6 @@ There is the possibility to integrate
         - was used to write the code and commit it to GitHub
     - Heroku 
         - was used to deploy the project 
-
-
-- Am I responsive
-  - was used to check the responsiveness of the website
-- DevTools
-  - were used to inspect the code during the development process and to check the accessibility
     - Languagetool
         - was used to check the spelling and grammar in the README file.
   
