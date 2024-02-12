@@ -213,10 +213,7 @@ There is the possibility to integrate
 
 - **CI Python Linter**
 
-![Screen shot of first part of the pep8 evaluation](assets/readmeimages/linter1.png)
-![Screen shot of second part of the pep8 evaluation](assets/readmeimages/linter2.png)
-![Screen shot of third part of the pep8 evaluation](assets/readmeimages/linter3.png)
-![Screen shot of fourth part of the pep8 evaluation](assets/readmeimages/linter4.png)
+![Screen shot of the pep8 evaluation](assets/readmeimages/linter1.png)
 
 - **Lighthouse**
 
@@ -258,6 +255,7 @@ Inspirations for specific problems were taken from the following websites:
   - <https://www.freecodecamp.org/news/python-exit-how-to-use-an-exit-function-in-python-to-stop-a-program/>
   - <https://www.geeksforgeeks.org/python-docstrings/>
   - <https://www.freecodecamp.org/news/print-newline-in-python/>
+  - <https://stackoverflow.com/questions/10660435/how-do-i-split-the-definition-of-a-long-string-over-multiple-lines>
 
 ### Media
 
