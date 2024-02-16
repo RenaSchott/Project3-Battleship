@@ -148,34 +148,32 @@ There is the possibility to integrate
 
 - Python
 
+### Python packages
+
+- Random -> randint method
+    - to be able to implement pseudo-random number generators for various distributions
+- Pyfiglet
+    - as a full port of FIGlet to use it in pure python
+- Sys
+    - to provide access to some variables used or maintained by the interpreter and to functions that interact strongly with the interpreter
+
+
 ### Framework, Libraries and Programs
 
-- Frameworks/ 
-
-- Libraries 
-    - None
-- Moduls
-    - Random -> randint method
-        - to be able to implement pseudo-random number generators for various distributions
-    - Pyfiglet
-        - as a full port of FIGlet to use it in pure python
-    - Sys
-        - to provide access to some variables used or maintained by the interpreter and to functions that interact strongly with the interpreter
-- Programs
-    - Balsamiq
-        - was used to create the wireframes
-    - Lucidchart
-        - was used to create the flow chart
-    - GitHub
-        - was used to store the project site
-    - Gitpod
-        - was used to write the code and commit it to GitHub
-    - Heroku 
-        - was used to deploy the project 
-    - CI Python Linter
-        - was used for finding errors
-    - Languagetool
-        - was used to check the spelling and grammar in the README file.
+- [Balsamiq](https://balsamiq.com/)
+    - was used to create the wireframes
+- Lucidchart
+    - was used to create the flow chart
+- GitHub
+    - was used to store the project site
+- Gitpod
+    - was used to write the code and commit it to GitHub
+- Heroku 
+    - was used to deploy the project 
+- CI Python Linter
+    - was used for finding errors
+- Languagetool
+    - was used to check the spelling and grammar in the README file.
 
 
 ## Testing
