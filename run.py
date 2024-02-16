@@ -62,6 +62,10 @@ def get_username():
         print(f"The input contains only whitespace characters.\
               Please restart the game.")
         sys.exit(0)
+    elif username == "":
+        print(f"A username is needed for playing the game.\
+              Please restart the game.")
+        sys.exit(0)
     return username
 
 
@@ -195,22 +199,31 @@ def guess_by_user():
         convert_guess_to_numbers[row], int(column) = integers for row and
         column
     """
-    row = input("Make a guess for the row (a-f): \n").lower()
-    while row not in "abcdef":
-        print("Invalid input. Please redo.")
+    while True: 
         row = input("Make a guess for the row (a-f): \n").lower()
-    while row == "":
-        print("Invalid input. Please redo.")
-        row = input("Make a guess for the row (a-f): \n").lower()
+        if row not in "abcdef":
+            print("Invalid input. Please redo.")
+            row = input("Make a guess for the row (a-f): \n").lower()
+        elif row.isspace():
+            print("Invalid input. Please redo.")
+            row = input("Make a guess for the row (a-f): \n").lower()
+        elif row == "":
+            print("Invalid input. Please redo.")
+            row = input("Make a guess for the row (a-f): \n").lower()
 
-    column = input("Make a guess for the column (1-6): \n")
-    while column not in "123456":
-        print("Invalid input. Please redo.")
-        column = input("Make a guess for the column (1-6): \n")
-    while column == "":
-        print("Invalid input. Please redo.")
-        column = input("Make a guess for the column (1-6): \n")
+    while True: 
+        column = input("Make a guess for the column (1-6): \n").lower()
+        if column not in "123456":
+            print("Invalid input. Please redo.")
+            column = input("Make a guess for the column (1-6): \n").lower()
+        elif column.isspace():
+            print("Invalid input. Please redo.")
+            column = input("Make a guess for the column (1-6): \n").lower()
+        elif column == "":
+            print("Invalid input. Please redo.")
+            column = input("Make a guess for the column (1-6): \n")
     return convert_guess_to_numbers[row], int(column)
+
 
 
 convert_guess_to_numbers = {
