@@ -203,13 +203,10 @@ def guess_by_user():
         row = input("Make a guess for the row (a-f): \n").lower()
         if row not in "abcdef":
             print("Invalid input. Please redo.")
-            row = input("Make a guess for the row (a-f): \n").lower()
         elif row.isspace():
             print("Invalid input. Please redo.")
-            row = input("Make a guess for the row (a-f): \n").lower()
         elif row == "":
             print("Invalid input. Please redo.")
-            row = input("Make a guess for the row (a-f): \n").lower()
         else:
             break
 
@@ -217,13 +214,10 @@ def guess_by_user():
         column = input("Make a guess for the column (1-6): \n").lower()
         if column not in "123456":
             print("Invalid input. Please redo.")
-            column = input("Make a guess for the column (1-6): \n").lower()
         elif column.isspace():
             print("Invalid input. Please redo.")
-            column = input("Make a guess for the column (1-6): \n").lower()
         elif column == "":
             print("Invalid input. Please redo.")
-            column = input("Make a guess for the column (1-6): \n")
         else:
             break
     return convert_guess_to_numbers[row], int(column)
