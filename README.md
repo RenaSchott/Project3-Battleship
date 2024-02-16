@@ -28,6 +28,7 @@ View the live project here: <https://project3-battleship-2a9ceefa4769.herokuapp.
     - [Features left to implement](#features-left-to-implement)
   - [Used Technologies](#used-technologies)
     - [Languages Used](#languages-used)
+    - [Python Packages](#python-packages)
     - [Framework, Libraries and Programs](#framework-libraries-and-programs)
   - [Testing](#testing)
     - [Manual testing](#manual-testing)
