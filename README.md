@@ -147,33 +147,32 @@ There is the possibility to integrate
 
 ### Languages Used
 
-- Python
+- [Python](https://www.python.org/downloads/)
 
 ### Python packages
 
-- Random -> randint method
+- [Random](https://www.w3schools.com/python/module_random.asp) -> randint method
     - to be able to implement pseudo-random number generators for various distributions
-- Pyfiglet
+- [Pyfiglet](https://pypi.org/project/pyfiglet/)
     - as a full port of FIGlet to use it in pure python
-- Sys
+- [Sys](https://docs.python.org/3/library/sys.html)
     - to provide access to some variables used or maintained by the interpreter and to functions that interact strongly with the interpreter
 
 
 ### Framework, Libraries and Programs
-
 - [Balsamiq](https://balsamiq.com/)
     - was used to create the wireframes
-- Lucidchart
+- [Lucidchart](https://www.lucidchart.com/pages/de)
     - was used to create the flow chart
-- GitHub
+- [GitHub](https://github.com/)
     - was used to store the project site
-- Gitpod
+- [Gitpod](https://www.gitpod.io/)
     - was used to write the code and commit it to GitHub
-- Heroku 
+- [Heroku](https://id.heroku.com/login)
     - was used to deploy the project 
-- CI Python Linter
+- [CI Python Linter](https://pep8ci.herokuapp.com/)
     - was used for finding errors
-- Languagetool
+- [Languagetool](https://languagetool.org/de)
     - was used to check the spelling and grammar in the README file.
 
 
