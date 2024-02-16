@@ -150,8 +150,8 @@ There is the possibility to integrate
 
 ### Framework, Libraries and Programs
 
-- Frameworks 
-    - None
+- Frameworks/ 
+
 - Libraries 
     - None
 - Moduls

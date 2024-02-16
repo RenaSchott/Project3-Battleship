@@ -56,8 +56,8 @@ def get_username():
     Returns:
         username = Answer to the question
     """
-    username = input(f"A name is needed for playing the game.\
-                     What is your name?\n")
+    username = input("A name is needed for playing the game. "
+                     "What is your name?\n")
     if username.isspace():
         print(f"The input contains only whitespace characters.\
               Please restart the game.")
@@ -210,6 +210,8 @@ def guess_by_user():
         elif row == "":
             print("Invalid input. Please redo.")
             row = input("Make a guess for the row (a-f): \n").lower()
+        else:
+            break
 
     while True: 
         column = input("Make a guess for the column (1-6): \n").lower()
@@ -222,8 +224,9 @@ def guess_by_user():
         elif column == "":
             print("Invalid input. Please redo.")
             column = input("Make a guess for the column (1-6): \n")
+        else:
+            break
     return convert_guess_to_numbers[row], int(column)
-
 
 
 convert_guess_to_numbers = {
