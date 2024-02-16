@@ -1,11 +1,15 @@
 import pyfiglet
-from random import randint
 import sys
+from random import randint
 
 
 # Inspired by:
 # https://www.geeksforgeeks.org/python-ascii-art-using-pyfiglet-module/
 WELCOME = pyfiglet.figlet_format("Welcome to Battleship!")
+
+
+convert_guess_to_numbers = {
+    "a": 1, "b": 2, "c": 3, "d": 4, "e": 5, "f": 6}
 
 
 # Inspired by:
@@ -216,10 +220,6 @@ def guess_by_user():
         else:
             break
     return convert_guess_to_numbers[row], int(column)
-
-
-convert_guess_to_numbers = {
-    "a": 1, "b": 2, "c": 3, "d": 4, "e": 5, "f": 6}
 
 
 # Inspired by https://www.youtube.com/watch?v=tF1WRCrd_HQ
