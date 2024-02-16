@@ -155,7 +155,7 @@ There is the possibility to integrate
 - Libraries 
     - None
 - Moduls
-    - Random
+    - Random -> randint method
         - to be able to implement pseudo-random number generators for various distributions
     - Pyfiglet
         - as a full port of FIGlet to use it in pure python
