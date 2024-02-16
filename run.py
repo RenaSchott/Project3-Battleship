@@ -2,20 +2,15 @@ import pyfiglet
 from random import randint
 import sys
 
-"""
-Inspired by:
-https://www.geeksforgeeks.org/python-ascii-art-using-pyfiglet-module/
-"""
+
+# Inspired by:
+# https://www.geeksforgeeks.org/python-ascii-art-using-pyfiglet-module/
 WELCOME = pyfiglet.figlet_format("Welcome to Battleship!")
 
 
-"""
-Inspired by:
-https://www.freecodecamp.org/news/
-python-exit-how-to-use-an-exit-function-in-python-to-stop-a-program/
-"""
-
-
+# Inspired by:
+# https://www.freecodecamp.org/news/
+# python-exit-how-to-use-an-exit-function-in-python-to-stop-a-program/
 def display_homepage():
     """
     Question asked whether the user want to play the game.
