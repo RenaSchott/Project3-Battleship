@@ -70,7 +70,7 @@ def get_username():
     return username
 
 
-# Rules explanation; Inspired by 
+# Rules explanation; Inspired by
 # https://www.freecodecamp.org/news/print-newline-in-python/
 def explain_rules():
     """
@@ -99,12 +99,13 @@ def explain_rules():
             print("Invalid input. Please redo.")
             rules = input("Do you need the game rules (y/n)?\n")
             if rules == "y":
-                text = "This is a simplified version of the normal battleship "\
-                       "game. Therefore 6 ships \n are randomly distributed on "\
-                       "the game board and your task is to find them by \n "\
-                       "guessing a row and a column. When you hit all 6 ships "\
-                       "you win. But therefore \n you only have 15 valid "\
-                       "tries. Otherwise you loose the game."
+                text = "This is a simplified version of the normal "\
+                       "battleship game. Therefore 6 ships \n are randomly "\
+                       "distributed on the game board and your task is to "\
+                       "find them by \n guessing a row and a column. When "\
+                       "you hit all 6 ships you win. But therefore \n you "\
+                       "only have 15 valid tries. Otherwise you loose the "\
+                       "game."
                 lines = text.split('\n')
                 print('\n'.join(lines))
                 break
@@ -148,25 +149,25 @@ def print_board(board):
     Returns:
         only print statements
     """
-    print(f" {board[0][0]} | {board[0][1]} | {board[0][2]} | {board[0][3]} | "\
+    print(f" {board[0][0]} | {board[0][1]} | {board[0][2]} | {board[0][3]} | "
           f"{board[0][4]} | {board[0][5]} | {board[0][6]} ")
     print(f"---|---|---|---|---|---|---")
-    print(f" {board[1][0]} | {board[1][1]} | {board[1][2]} | {board[1][3]} | "\
+    print(f" {board[1][0]} | {board[1][1]} | {board[1][2]} | {board[1][3]} | "
           f"{board[1][4]} | {board[1][5]} | {board[1][6]} ")
     print(f"---|---|---|---|---|---|---")
-    print(f" {board[2][0]} | {board[2][1]} | {board[2][2]} | {board[2][3]} | "\
+    print(f" {board[2][0]} | {board[2][1]} | {board[2][2]} | {board[2][3]} | "
           f"{board[2][4]} | {board[2][5]} | {board[2][6]} ")
     print(f"---|---|---|---|---|---|---")
-    print(f" {board[3][0]} | {board[3][1]} | {board[3][2]} | {board[3][3]} | "\
+    print(f" {board[3][0]} | {board[3][1]} | {board[3][2]} | {board[3][3]} | "
           f"{board[3][4]} | {board[3][5]} | {board[3][6]} ")
     print(f"---|---|---|---|---|---|---")
-    print(f" {board[4][0]} | {board[4][1]} | {board[4][2]} | {board[4][3]} | "\
+    print(f" {board[4][0]} | {board[4][1]} | {board[4][2]} | {board[4][3]} | "
           f"{board[4][4]} | {board[4][5]} | {board[4][6]} ")
     print(f"---|---|---|---|---|---|---")
-    print(f" {board[5][0]} | {board[5][1]} | {board[5][2]} | {board[5][3]} | "\
+    print(f" {board[5][0]} | {board[5][1]} | {board[5][2]} | {board[5][3]} | "
           f"{board[5][4]} | {board[5][5]} | {board[5][6]} ")
     print(f"---|---|---|---|---|---|---")
-    print(f" {board[6][0]} | {board[6][1]} | {board[6][2]} | {board[6][3]} | "\
+    print(f" {board[6][0]} | {board[6][1]} | {board[6][2]} | {board[6][3]} | "
           f"{board[6][4]} | {board[6][5]} | {board[6][6]} ")
 
 
@@ -201,7 +202,7 @@ def guess_by_user():
         convert_guess_to_numbers[row], int(column) = integers for row and
         column
     """
-    while True: 
+    while True:
         row = input("Make a guess for the row (a-f): \n").lower()
         if row not in "abcdef":
             print("Invalid input. Please redo.")
@@ -212,7 +213,7 @@ def guess_by_user():
         else:
             break
 
-    while True: 
+    while True:
         column = input("Make a guess for the column (1-6): \n").lower()
         if column not in "123456":
             print("Invalid input. Please redo.")
@@ -225,7 +226,7 @@ def guess_by_user():
     return convert_guess_to_numbers[row], int(column)
 
 
-# Displaying reaction to user guess; Inspired by 
+# Displaying reaction to user guess; Inspired by
 # https://www.youtube.com/watch?v=tF1WRCrd_HQ
 def run_game():
     """
