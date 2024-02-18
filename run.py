@@ -3,16 +3,17 @@ import sys
 from random import randint
 
 
-# Inspired by:
+# Welcome message; Inspired by:
 # https://www.geeksforgeeks.org/python-ascii-art-using-pyfiglet-module/
 WELCOME = pyfiglet.figlet_format("Welcome to Battleship!")
 
 
+# Conversion of letters to numbers for the user guess
 convert_guess_to_numbers = {
     "a": 1, "b": 2, "c": 3, "d": 4, "e": 5, "f": 6}
 
 
-# Inspired by:
+# Displaying starting screen with starting question; Inspired by:
 # https://www.freecodecamp.org/news/
 # python-exit-how-to-use-an-exit-function-in-python-to-stop-a-program/
 def display_homepage():
@@ -45,6 +46,7 @@ def display_homepage():
     return start
 
 
+# Question for user name
 def get_username():
     """
     User is asked for their name.
@@ -68,7 +70,8 @@ def get_username():
     return username
 
 
-# Inspired by https://www.freecodecamp.org/news/print-newline-in-python/
+# Rules explanation; Inspired by 
+# https://www.freecodecamp.org/news/print-newline-in-python/
 def explain_rules():
     """
     User is asked whether a rule explanation is needed,
@@ -111,7 +114,7 @@ def explain_rules():
     return rules
 
 
-# Inspired by https://www.youtube.com/watch?v=RqCZBbfd9Fw
+# Board creation;  Inspired by https://www.youtube.com/watch?v=RqCZBbfd9Fw
 def create_board():
     """
     Creates the board for the battleship game
@@ -134,7 +137,7 @@ def create_board():
     return board
 
 
-# Inspired by https://www.youtube.com/watch?v=RqCZBbfd9Fw
+# Displaying the board; Inspired by https://www.youtube.com/watch?v=RqCZBbfd9Fw
 def print_board(board):
     """
     Printing the game board with the proper styling.
@@ -167,7 +170,7 @@ def print_board(board):
           f"{board[6][4]} | {board[6][5]} | {board[6][6]} ")
 
 
-# Inspired by https://www.youtube.com/watch?v=tF1WRCrd_HQ
+# Ships generation; Inspired by https://www.youtube.com/watch?v=tF1WRCrd_HQ
 def generate_ships(board):
     """
     Creating 6 ships and placing them randomly on the board
@@ -186,7 +189,7 @@ def generate_ships(board):
     return board
 
 
-# Inspired by https://www.youtube.com/watch?v=tF1WRCrd_HQ
+# User guess; Inspired by https://www.youtube.com/watch?v=tF1WRCrd_HQ
 def guess_by_user():
     """
     Player input for their guesses for the battleship locations
@@ -222,7 +225,8 @@ def guess_by_user():
     return convert_guess_to_numbers[row], int(column)
 
 
-# Inspired by https://www.youtube.com/watch?v=tF1WRCrd_HQ
+# Displaying reaction to user guess; Inspired by 
+# https://www.youtube.com/watch?v=tF1WRCrd_HQ
 def run_game():
     """
     Main game engine including the evaluation of the user input
@@ -241,23 +245,28 @@ def run_game():
         print_board(board1)
         row, column = guess_by_user()
         guess = str(row) + str(column)
+        # User guess was a hit
         if board2[row][column] == "X":
             print("You hit one battleship and it sunk. Congratulations!")
             board1[row][column] = "*"
             moves.append(guess)
             sunken1 += 1
             turns -= 1
+        # User guess was a miss
         elif guess not in moves:
             print("There is no battleship!")
             board1[row][column] = "O"
             moves.append(guess)
             turns -= 1
+        # Invalid user guess
         else:
             print("You already tried this one. Please try again.")
         print("You can try " + str(turns) + " more times.")
+        # User won
         if sunken1 == 6:
             print("Congratulations! You won.")
             sys.exit(0)
+        # User lost
         if turns == 0:
             print("Sorry! Game over! You lost.")
             sys.exit(0)
